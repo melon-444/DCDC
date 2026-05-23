@@ -148,6 +148,23 @@ static void display_update(void)
     LCD_DrawString(82, 52, buf, COLOR_WHITE, COLOR_BLACK);
 }
 
+static void pwm_set_duty(float duty)
+{
+    if (duty < 0.0f)
+        duty = .0f;
+
+    if (duty > 0.35f)
+        duty = .35f;
+    g_duty_ratio = duty;
+
+    uint32_t cmp = (uint32_t)(PWM_PERIOD * (1.0f-duty));
+
+    if(cmp > PWM_PERIOD)
+        cmp = PWM_PERIOD;
+        
+    DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, cmp, DL_TIMER_CC_0_INDEX);
+}
+
 int main(void)
 {
     SYSCFG_DL_init();
@@ -157,6 +174,8 @@ int main(void)
 
     button_init();
 
+    
+
     NVIC_ClearPendingIRQ(ADC_SENSE_INST_INT_IRQN);
     NVIC_ClearPendingIRQ(PWM_CHG_INST_INT_IRQN);
     NVIC_EnableIRQ(ADC_SENSE_INST_INT_IRQN);
@@ -165,8 +184,9 @@ int main(void)
     DL_ADC12_enableConversions(ADC_SENSE_INST);
     DL_ADC12_enablePower(ADC_SENSE_INST);
 
+    pwm_set_duty(0.0f);
     DL_TimerA_startCounter(PWM_CHG_INST);
-    DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, 32, DL_TIMER_CC_0_INDEX);
+
 
     LCD_Init();
 
@@ -177,7 +197,7 @@ int main(void)
     LCD_DrawString(0, 40, "DUTY:", COLOR_WHITE, COLOR_BLACK);
     LCD_DrawString(0, 52, "STAT:", COLOR_WHITE, COLOR_BLACK);
 
-    buck_single_pid_delta_init(&buckpid, 4.2f, 0.5f, 0.1f, 0.0001f);
+    buck_single_pid_delta_init(&buckpid, 4.2f, 0.02f, 0.001f, 0.000f);
     while (1)
     {
         display_update();
@@ -190,9 +210,9 @@ int main(void)
 
         if (isADCReady())
         {
-            g_duty_ratio = buck_single_pid_delta_update(&buckpid, 0.5, getVsense(), getIsense());
+            g_duty_ratio = buck_single_pid_delta_hard_update(&buckpid, 0.5, getVsense(), getIsense());
 
-            DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, PWM_PERIOD * g_duty_ratio, DL_TIMER_CC_0_INDEX);
+            DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, PWM_PERIOD * (1-g_duty_ratio), DL_TIMER_CC_0_INDEX);
             clearADCReady();
             /* PID control entry point:
              *   duty = buck_pid_update(&buck, target_V, vsense, isense);
@@ -203,9 +223,10 @@ int main(void)
         }
         if (single_pid_should_stop(&buckpid))
         {
-            g_state = (BMS_DONE);
-            DL_TimerA_stopCounter(PWM_CHG_INST);
             g_duty_ratio = 0.0f;
+            DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, PWM_PERIOD * (1-g_duty_ratio), DL_TIMER_CC_0_INDEX);
+            DL_TimerA_stopCounter(PWM_CHG_INST);
+            g_state = (BMS_FAULT);
         }
     }
 }

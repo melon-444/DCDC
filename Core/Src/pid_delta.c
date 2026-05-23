@@ -34,8 +34,9 @@ void buck_single_pid_delta_init(CascadedPID *buck,
     buck->outer.kp = v_threshold;
     buck->outer.ki = 0.0f;
     buck->outer.kd = 0.0f;
-    buck->duty = 0.1f;
+    buck->duty = 0.0f;
     buck->state = PID_STATE_IDLE;
+    buck->inner.output_cache = 0.0f; /* ensure output cache starts at 0 for single PID */
 }
 
 void boost_single_pid_delta_init(CascadedPID *boost,
@@ -46,7 +47,7 @@ void boost_single_pid_delta_init(CascadedPID *boost,
     boost->outer.kp = v_threshold;
     boost->outer.ki = 0.0f;
     boost->outer.kd = 0.0f;
-    boost->duty = 0.5f;
+    boost->duty = 0.0f;
     boost->state = PID_STATE_IDLE;
 }
 
@@ -163,6 +164,7 @@ float buck_single_pid_delta_update(CascadedPID *buck, float i_ref, float vsense,
         if (buck->duty > 0.02f)
         {
             buck->duty = buck->duty - 0.02f;
+            return buck->duty;
         }
         else
         {
@@ -180,6 +182,54 @@ float buck_single_pid_delta_update(CascadedPID *buck, float i_ref, float vsense,
 
     if (buck->duty > DEFAULT_DUTY_MAX)
         buck->duty = DEFAULT_DUTY_MAX;
+    if (buck->duty < DEFAULT_DUTY_MIN)
+        buck->duty = DEFAULT_DUTY_MIN;
+
+    return buck->duty;
+}
+
+float buck_single_pid_delta_hard_update(CascadedPID *buck, float i_ref, float vsense, float isense)
+{
+    float i_err;
+
+    /* 硬过压 / 过流保护 */
+    if ((vsense >= 4.30f) || (isense >= 0.80f))
+    {
+        buck->state = PID_STATE_STOP;
+        buck->duty = 0.0f;
+        buck->inner.output_cache = 0.0f;
+        buck->inner.prev_error[0] = 0.0f;
+        buck->inner.prev_error[1] = 0.0f;
+        return 0.0f;
+    }
+
+    /* 进入 4.2V 限压区后，不允许继续做恒流增占空比 */
+    if (vsense >= buck->outer.kp)
+    {
+        buck->state = PID_STATE_CV;
+
+        if (buck->duty > 0.002f)
+        {
+            buck->duty -= 0.002f;
+        }
+        else
+        {
+            buck->duty = 0.0f;
+        }
+
+        buck->inner.output_cache = buck->duty;
+        return buck->duty;
+    }
+
+    /* 4.2V 以下才做恒流控制 */
+    buck->state = PID_STATE_CC;
+
+    i_err = i_ref - isense;
+    buck->duty = pid_delta_step(&buck->inner, i_err);
+
+    if (buck->duty > DEFAULT_DUTY_MAX)
+        buck->duty = DEFAULT_DUTY_MAX;
+
     if (buck->duty < DEFAULT_DUTY_MIN)
         buck->duty = DEFAULT_DUTY_MIN;
 
@@ -211,4 +261,50 @@ float boost_single_pid_delta_update(CascadedPID *boost, float i_ref, float vsens
         boost->duty = DEFAULT_DUTY_MIN;
 
     return boost->duty;
+}
+
+void cc_pid_init(CC_PID *pid, float kp, float ki, float kd,
+                 float i_limit, float dout_limit)
+{
+    pid->kp = kp;
+    pid->ki = ki;
+    pid->kd = kd;
+    pid->prev_error[0] = 0.0f;
+    pid->prev_error[1] = 0.0f;
+    pid->i_limit = i_limit;
+    pid->dout_limit = dout_limit;
+}
+
+float cc_pid_step(CC_PID *pid, float i_ref, float i_sense)
+{
+    float p, i, d;
+    float error = i_ref - i_sense;
+
+    /* I increment with saturation */
+    i = pid->ki * error;
+    if (i > pid->i_limit)
+        i = pid->i_limit;
+    if (i < -pid->i_limit)
+        i = -pid->i_limit;
+
+    /* P increment */
+    p = pid->kp * (error - pid->prev_error[0]);
+
+    /* D increment */
+    d = pid->kd * (error - 2.0f * pid->prev_error[0] + pid->prev_error[1]);
+
+    /* update error history */
+    pid->prev_error[1] = pid->prev_error[0];
+    pid->prev_error[0] = error;
+
+    /* total delta */
+    float dout = p + i + d;
+
+    /* delta output saturation */
+    if (dout > pid->dout_limit)
+        dout = pid->dout_limit;
+    if (dout < -pid->dout_limit)
+        dout = -pid->dout_limit;
+
+    return dout;
 }

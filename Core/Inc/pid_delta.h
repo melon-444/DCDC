@@ -72,6 +72,9 @@ float buck_single_pid_delta_update(CascadedPID *buck,float i_ref
                                  
 float boost_single_pid_delta_update(CascadedPID *boost,float i_ref
                                  , float vsense_raw, float isense_raw);
+
+float buck_single_pid_delta_hard_update(CascadedPID *buck,float i_ref
+                                 , float vsense_raw, float isense_raw);
 /* ADC result [V] */
 
 float buck_pid_current_update(CascadedPID *buck,
@@ -99,4 +102,20 @@ inline int single_pid_should_stop(const CascadedPID *pid)
     return pid ->state == PID_STATE_STOP;
 }
 #endif /*PID_D_INLINE*/
+
+/* -------- CC PID: pure incremental, delta output only -------- */
+typedef struct {
+    float kp;
+    float ki;
+    float kd;
+    float prev_error[2];   /* for delta P, D calculation */
+    float i_limit;         /* integral increment saturation */
+    float dout_limit;      /* delta output saturation */
+} CC_PID;
+
+void cc_pid_init(CC_PID *pid, float kp, float ki, float kd,
+                 float i_limit, float dout_limit);
+
+float cc_pid_step(CC_PID *pid, float i_ref, float i_sense);
+
 #endif /* PID_DELTA_H */
