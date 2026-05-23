@@ -210,7 +210,8 @@ int main(void)
 
         if (isADCReady())
         {
-            g_duty_ratio = buck_single_pid_delta_hard_update(&buckpid, 0.5, getVsense(), getIsense());
+            g_duty_ratio = 0.43;
+            //buck_single_pid_delta_hard_update(&buckpid, 0.5, getVsense(), getIsense());
 
             DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, PWM_PERIOD * (1-g_duty_ratio), DL_TIMER_CC_0_INDEX);
             clearADCReady();
