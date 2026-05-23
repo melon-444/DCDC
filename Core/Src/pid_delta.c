@@ -36,10 +36,10 @@ float pid_delta_step(PID_Controller *pid, float error)
     if (pid->integral < -pid->integral_limit)
         pid->integral = -pid->integral_limit;
     // p
-    p = pid->kp * (error - pid->prev_error);
+    p = pid->kp * (error - pid->prev_error[0]);
     // d
 
-    d = pid->kd * (error - pid->prev_error);
+    d = pid->kd * (error -( 2*pid->prev_error[0]) +pid->prev_error[1]);
 
     float out = p + pid->integral + d;
 
@@ -48,7 +48,9 @@ float pid_delta_step(PID_Controller *pid, float error)
     else if (pid->output_limit < -pid->output_limit)
         pid->output_limit = -pid->output_limit;
 
-    pid->prev_error = error;
+    pid->prev_error[1] = pid->prev_error[0];
+    pid->prev_error[0] = error;
+    
     pid->output_cache += out; /* store output for potential debugging */
     return pid->output_cache;
 }

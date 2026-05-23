@@ -10,7 +10,7 @@ typedef struct {
     float ki;
     float kd;
     float integral;
-    float prev_error;
+    float prev_error[2]; /* store current and previous error for delta calculation */
     float integral_limit;
     float output_limit;
     float output_cache;/*optimal store last output*/

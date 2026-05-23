@@ -35,7 +35,7 @@ float pid_step(PID_Controller *pid, float error)
         pid->integral = -pid->integral_limit;
 
     p = pid->kp * error;
-    d = pid->kd * (error - pid->prev_error);
+    d = pid->kd * (error - pid->prev_error[0]);
 
     float out = p + pid->ki * pid->integral + d;
 
@@ -44,7 +44,7 @@ float pid_step(PID_Controller *pid, float error)
     else if (out < -pid->output_limit)
         out = -pid->output_limit;
 
-    pid->prev_error = error;
+    pid->prev_error[0] = error;
     pid->output_cache = out; /* store output for potential debugging */
     return out;
 }
