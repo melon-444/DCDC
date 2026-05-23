@@ -23,7 +23,7 @@ void buck_pid_delta_init(BuckCascadedPID *buck,
     pid_delta_init(&buck->outer, v_kp, v_ki, v_kd, 5.0f, DEFAULT_IREF_MAX);
     pid_delta_init(&buck->inner, i_kp, i_ki, i_kd, 10.0f, DEFAULT_DUTY_MAX);
     buck->vref = DEFAULT_VREF;
-    buck->duty = 0.0f;
+    buck->duty = 0.5f;
     buck->iref_limit = DEFAULT_IREF_MAX;
 }
 
@@ -35,7 +35,7 @@ void buck_single_pid_delta_init(BuckCascadedPID *buck,
     buck->outer.kp = v_threshold;
     buck->outer.ki = 0.0f;
     buck->outer.kd = 0.0f;
-    buck->duty = 0.0f;
+    buck->duty = 0.5f;
 }
 
 void boost_single_pid_delta_init(BuckCascadedPID *boost,
@@ -46,7 +46,7 @@ void boost_single_pid_delta_init(BuckCascadedPID *boost,
     boost->outer.kp = v_threshold;
     boost->outer.ki = 0.0f;
     boost->outer.kd = 0.0f;
-    boost->duty = 0.0f;
+    boost->duty = 0.5f;
 }
 
 

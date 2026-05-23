@@ -82,6 +82,7 @@ GPIO1.associatedPins[6].direction           = "INPUT";
 GPIO1.associatedPins[6].assignedPin         = "21";
 GPIO1.associatedPins[6].ioStructure         = "SD";
 GPIO1.associatedPins[6].assignedPortSegment = "Upper";
+GPIO1.associatedPins[6].internalResistor    = "PULL_UP";
 GPIO1.associatedPins[7].$name               = "KEY_UP";
 GPIO1.associatedPins[7].direction           = "INPUT";
 GPIO1.associatedPins[7].ioStructure         = "SD";

@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>0</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -398,6 +398,16 @@
               <FileName>pid_delta.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/pid_delta.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_ssd1306.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/driver_ssd1306.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_ssd1306_interface_mspm0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/driver_ssd1306_interface_mspm0.c</FilePath>
             </File>
           </Files>
         </Group>

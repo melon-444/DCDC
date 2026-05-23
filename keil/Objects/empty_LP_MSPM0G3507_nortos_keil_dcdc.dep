@@ -1,6 +1,6 @@
 Dependencies for Project 'empty_LP_MSPM0G3507_nortos_keil', Target 'dcdc': (DO NOT MODIFY !)
 CompilerVersion: 6210000::V6.21::ARMCLANG
-F (../Core/Src/main.c)(0x6A115CAC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/main.o -MD)
+F (../Core/Src/main.c)(0x6A118312)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/main.o -MD)
 I (..\source\ti\devices\msp\msp.h_.\source\ti\devices\DeviceFamily.h)(0x00000000)
 I (..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x66D136B8)
 I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
@@ -67,10 +67,92 @@ I (..\source\ti\driverlib\dl_uart.hx.\source\ti\driverlib\dl_uart_main.h)(0x0000
 I (..\source\ti\driverlib\dl_vref.hx.\source\ti\driverlib\dl_wwdt.h)(0x00000000)
 I (..\source\ti\driverlib\m0p\dl_interrupt.h)(0x66D136B8)
 I (..\source\ti\driverlib\m0p\dl_systick.h..\Core\Inc\pid_delta.h)(0x00000000)
+I (..\Core\Inc\driver_ssd1306.h)(0x6A1168C7)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
+I (..\Core\Inc\driver_ssd1306_interface.h)(0x68FD98E1)
 F (../Core/Src/pid.c)(0x6A11550A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid.o -MD)
-F (../Core/Src/pid_delta.c)(0x6A115C92)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid_delta.o -MD)
+F (../Core/Src/pid_delta.c)(0x6A116A8D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid_delta.o -MD)
+F (../Core/Src/driver_ssd1306.c)(0x6A1168DC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/driver_ssd1306.o -MD)
+I (..\Core\Inc\driver_ssd1306.h)(0x6A1168C7)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
+I (..\Core\Inc\driver_ssd1306_font.h)(0x6A1168BD)
+F (../Core/Src/driver_ssd1306_interface_mspm0.c)(0x6A1182D9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/driver_ssd1306_interface_mspm0.o -MD)
+I (..\Core\Inc\driver_ssd1306_interface.hs.\Core\Inc\driver_ssd1306.h)(0x00000000)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
+I (..\ti_msp_dl_config.h_.\source\ti\devices\msp\msp.h)(0x00000000)
+I (..\source\ti\devices\DeviceFamily.h)(0x66D136B8)
+I (..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x66D136B8)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x6569B012)
+I (..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x66D136B8)
+I (C:\Users\melon_444\Documents\C_workspace\TItest\DCDC\source\third_party\CMSIS\Core\Include\cmsis_version.h)(0x66D136B8)
+I (C:\Users\melon_444\Documents\C_workspace\TItest\DCDC\source\third_party\CMSIS\Core\Include\cmsis_compiler.h)(0x66D136B8)
+I (C:\Users\melon_444\Documents\C_workspace\TItest\DCDC\source\third_party\CMSIS\Core\Include\cmsis_armclang.h)(0x66D136B8)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x64F9642C)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569B010)
+I (C:\Users\melon_444\Documents\C_workspace\TItest\DCDC\source\third_party\CMSIS\Core\Include\mpu_armv7.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_aes.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_comp.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_crc.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_dma.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_oa.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_spi.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_trng.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_uart.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_vref.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x66D136B8)
+I (..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x66D136B8)
+I (..\source\ti\driverlib\driverlib.hl.\source\ti\driverlib\dl_adc12.h)(0x00000000)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (..\source\ti\driverlib\dl_common.h)(0x66D136B8)
+I (..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x66D136B8)
+I (..\source\ti\driverlib\m0p\dl_core.hy.\source\ti\driverlib\dl_aes.h)(0x00000000)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6569B012)
+I (..\source\ti\driverlib\dl_aesadv.hA.\source\ti\driverlib\dl_comp.h)(0x00000000)
+I (..\source\ti\driverlib\dl_crc.hv.\source\ti\driverlib\dl_crcp.h)(0x00000000)
+I (..\source\ti\driverlib\dl_dac12.h\.\source\ti\driverlib\dl_dma.h)(0x00000000)
+I (..\source\ti\driverlib\dl_flashctl.h)(0x66D136B8)
+I (..\source\ti\driverlib\m0p\dl_sysctl.h)(0x66D136B8)
+I (..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x66D136B8)
+I (..\source\ti\driverlib\dl_gpamp.h\.\source\ti\driverlib\dl_gpio.h)(0x00000000)
+I (..\source\ti\driverlib\dl_i2c.h..\source\ti\driverlib\dl_iwdt.h)(0x00000000)
+I (..\source\ti\driverlib\dl_lfss.h)(0x66D136B8)
+I (..\source\ti\driverlib\dl_keystorectl.h)(0x66D136B8)
+I (..\source\ti\driverlib\dl_lcd.ho.\source\ti\driverlib\dl_mathacl.h)(0x00000000)
+I (..\source\ti\driverlib\dl_mcan.h..\source\ti\driverlib\dl_opa.h)(0x00000000)
+I (..\source\ti\driverlib\dl_rtc.hh.\source\ti\driverlib\dl_rtc_common.h)(0x00000000)
+I (..\source\ti\driverlib\dl_rtc_a.h\.\source\ti\driverlib\dl_rtc_b.h)(0x00000000)
+I (..\source\ti\driverlib\dl_scratchpad.hu.\source\ti\driverlib\dl_spi.h)(0x00000000)
+I (..\source\ti\driverlib\dl_tamperio.h)(0x66D136B8)
+I (..\source\ti\driverlib\dl_timera.h..\source\ti\driverlib\dl_timer.h)(0x00000000)
+I (..\source\ti\driverlib\dl_timerg.h..\source\ti\driverlib\dl_trng.h)(0x00000000)
+I (..\source\ti\driverlib\dl_uart_extend.h)(0x66D136B8)
+I (..\source\ti\driverlib\dl_uart.hx.\source\ti\driverlib\dl_uart_main.h)(0x00000000)
+I (..\source\ti\driverlib\dl_vref.hx.\source\ti\driverlib\dl_wwdt.h)(0x00000000)
+I (..\source\ti\driverlib\m0p\dl_interrupt.h)(0x66D136B8)
+I (..\source\ti\driverlib\m0p\dl_systick.h)(0x66D136B8)
+I (C:\Program Files\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x6569B012)
 F (../dcdc.syscfg)(0x6A1152BB)()
-F (../ti_msp_dl_config.h)(0x6A1152BB)()
+F (../ti_msp_dl_config.h)(0x6A118331)()
 F (../ti_msp_dl_config.c)(0x6A1152BB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I .. -I ../source/third_party/CMSIS/Core/Include -I ../source -I ../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x -I ../Core/Inc-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MD)
 I (..\source\ti\devices\msp\msp.h_.\source\ti\devices\DeviceFamily.h)(0x00000000)
 I (..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x66D136B8)

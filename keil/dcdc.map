@@ -12,23 +12,36 @@ Section Cross References
     main.o(.ARM.exidx.text.isADCReady) refers to main.o(.text.isADCReady) for [Anonymous Symbol]
     main.o(.text.clearADCReady) refers to main.o(.bss.gADC_ready) for gADC_ready
     main.o(.ARM.exidx.text.clearADCReady) refers to main.o(.text.clearADCReady) for [Anonymous Symbol]
-    main.o(.text.ADC0_IRQHandler) refers to fflti.o(.text) for __aeabi_ui2f
-    main.o(.text.ADC0_IRQHandler) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
-    main.o(.text.ADC0_IRQHandler) refers to main.o(.bss.gVsense_adcV) for gVsense_adcV
-    main.o(.text.ADC0_IRQHandler) refers to main.o(.bss.gIsense_adcV) for gIsense_adcV
-    main.o(.text.ADC0_IRQHandler) refers to main.o(.bss.gADC_ready) for gADC_ready
     main.o(.ARM.exidx.text.ADC0_IRQHandler) refers to main.o(.text.ADC0_IRQHandler) for [Anonymous Symbol]
-    main.o(.text.TIMA0_IRQHandler) refers to pid_delta.o(.text.buck_single_pid_delta_update) for buck_single_pid_delta_update
-    main.o(.text.TIMA0_IRQHandler) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
-    main.o(.text.TIMA0_IRQHandler) refers to ffixui.o(.text) for __aeabi_f2uiz
-    main.o(.text.TIMA0_IRQHandler) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
-    main.o(.text.TIMA0_IRQHandler) refers to main.o(.bss.gADC_ready) for gADC_ready
-    main.o(.text.TIMA0_IRQHandler) refers to main.o(.bss.gVsense_adcV) for gVsense_adcV
-    main.o(.text.TIMA0_IRQHandler) refers to main.o(.bss.gIsense_adcV) for gIsense_adcV
-    main.o(.text.TIMA0_IRQHandler) refers to main.o(.bss.buckpid) for buckpid
     main.o(.ARM.exidx.text.TIMA0_IRQHandler) refers to main.o(.text.TIMA0_IRQHandler) for [Anonymous Symbol]
     main.o(.text.main) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for SYSCFG_DL_init
     main.o(.text.main) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    main.o(.text.main) refers to fflti.o(.text) for __aeabi_ui2f
+    main.o(.text.main) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_init) for ssd1306_interface_spi_init
+    main.o(.text.main) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_set_interface) for ssd1306_set_interface
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_set_addr_pin) for ssd1306_set_addr_pin
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_init) for ssd1306_init
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_clear) for ssd1306_clear
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_gram_write_string) for ssd1306_gram_write_string
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_gram_update) for ssd1306_gram_update
+    main.o(.text.main) refers to driver_ssd1306.o(.text.ssd1306_gram_fill_rect) for ssd1306_gram_fill_rect
+    main.o(.text.main) refers to pid_delta.o(.text.buck_single_pid_delta_update) for buck_single_pid_delta_update
+    main.o(.text.main) refers to ffixui.o(.text) for __aeabi_f2uiz
+    main.o(.text.main) refers to main.o(.bss.gVsense_adcV) for gVsense_adcV
+    main.o(.text.main) refers to main.o(.bss.gIsense_adcV) for gIsense_adcV
+    main.o(.text.main) refers to main.o(.bss.gADC_ready) for gADC_ready
+    main.o(.text.main) refers to main.o(.bss.g_oled) for g_oled
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_delay_ms) for ssd1306_interface_delay_ms
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_write) for ssd1306_interface_reset_gpio_write
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_deinit) for ssd1306_interface_reset_gpio_deinit
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_init) for ssd1306_interface_reset_gpio_init
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write) for ssd1306_interface_iic_write
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_deinit) for ssd1306_interface_iic_deinit
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_init) for ssd1306_interface_iic_init
+    main.o(.text.main) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_debug_print) for ssd1306_interface_debug_print
+    main.o(.text.main) refers to main.o(.bss.buckpid) for buckpid
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     pid.o(.ARM.exidx.text.pid_init) refers to pid.o(.text.pid_init) for [Anonymous Symbol]
     pid.o(.ARM.exidx.text.buck_pid_init) refers to pid.o(.text.buck_pid_init) for [Anonymous Symbol]
@@ -76,6 +89,98 @@ Section Cross References
     pid_delta.o(.text.boost_single_pid_delta_update) refers to pid_delta.o(.text.pid_delta_step) for pid_delta_step
     pid_delta.o(.text.boost_single_pid_delta_update) refers to fcmp.o(i._fgr) for __aeabi_fcmpgt
     pid_delta.o(.ARM.exidx.text.boost_single_pid_delta_update) refers to pid_delta.o(.text.boost_single_pid_delta_update) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_clear) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_clear) refers to driver_ssd1306.o(.text.ssd1306_clear) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.a_ssd1306_write_byte) refers to driver_ssd1306.o(.text.a_ssd1306_write_byte) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_update) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_update) refers to driver_ssd1306.o(.text.ssd1306_gram_update) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_write_point) refers to driver_ssd1306.o(.text.a_ssd1306_write_byte) for a_ssd1306_write_byte
+    driver_ssd1306.o(.text.ssd1306_write_point) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_write_point) refers to driver_ssd1306.o(.text.ssd1306_write_point) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_read_point) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_read_point) refers to driver_ssd1306.o(.text.ssd1306_read_point) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_write_point) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_write_point) refers to driver_ssd1306.o(.text.ssd1306_gram_write_point) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_read_point) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_read_point) refers to driver_ssd1306.o(.text.ssd1306_gram_read_point) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_write_string) refers to driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_1608) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_write_string) refers to driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_1206) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_write_string) refers to driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_2412) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_write_string) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_write_string) refers to driver_ssd1306.o(.text.ssd1306_gram_write_string) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_write_cn_char) refers to driver_ssd1306.o(.rodata.gsc_ssd1306_chinese_1608) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_write_cn_char) refers to driver_ssd1306.o(.text.ssd1306_gram_write_cn_char) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_fill_rect) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_fill_rect) refers to driver_ssd1306.o(.text.ssd1306_gram_fill_rect) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_gram_draw_picture) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_draw_picture) refers to driver_ssd1306.o(.text.ssd1306_gram_draw_picture) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_init) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_init) refers to driver_ssd1306.o(.text.ssd1306_init) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_deinit) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_deinit) refers to driver_ssd1306.o(.text.ssd1306_deinit) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_interface) refers to driver_ssd1306.o(.text.ssd1306_set_interface) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_get_interface) refers to driver_ssd1306.o(.text.ssd1306_get_interface) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_addr_pin) refers to driver_ssd1306.o(.text.ssd1306_set_addr_pin) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_get_addr_pin) refers to driver_ssd1306.o(.text.ssd1306_get_addr_pin) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_low_column_start_address) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_low_column_start_address) refers to driver_ssd1306.o(.text.ssd1306_set_low_column_start_address) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_high_column_start_address) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_high_column_start_address) refers to driver_ssd1306.o(.text.ssd1306_set_high_column_start_address) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_memory_addressing_mode) refers to driver_ssd1306.o(.text.ssd1306_set_memory_addressing_mode) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_column_address_range) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_column_address_range) refers to driver_ssd1306.o(.text.ssd1306_set_column_address_range) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_page_address_range) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_page_address_range) refers to driver_ssd1306.o(.text.ssd1306_set_page_address_range) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_fade_blinking_mode) refers to driver_ssd1306.o(.text.ssd1306_set_fade_blinking_mode) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_right_horizontal_scroll) refers to driver_ssd1306.o(.text.ssd1306_set_right_horizontal_scroll) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_left_horizontal_scroll) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_left_horizontal_scroll) refers to driver_ssd1306.o(.text.ssd1306_set_left_horizontal_scroll) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_vertical_right_horizontal_scroll) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_vertical_right_horizontal_scroll) refers to driver_ssd1306.o(.text.ssd1306_set_vertical_right_horizontal_scroll) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_vertical_left_horizontal_scroll) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_vertical_left_horizontal_scroll) refers to driver_ssd1306.o(.text.ssd1306_set_vertical_left_horizontal_scroll) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_deactivate_scroll) refers to driver_ssd1306.o(.text.ssd1306_deactivate_scroll) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_activate_scroll) refers to driver_ssd1306.o(.text.ssd1306_activate_scroll) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_start_line) refers to driver_ssd1306.o(.text.ssd1306_set_display_start_line) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_contrast) refers to driver_ssd1306.o(.text.ssd1306_set_contrast) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_charge_pump) refers to driver_ssd1306.o(.text.ssd1306_set_charge_pump) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_segment_remap) refers to driver_ssd1306.o(.text.ssd1306_set_segment_remap) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_vertical_scroll_area) refers to driver_ssd1306.o(.text.ssd1306_set_vertical_scroll_area) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_entire_display) refers to driver_ssd1306.o(.text.ssd1306_set_entire_display) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_mode) refers to driver_ssd1306.o(.text.ssd1306_set_display_mode) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_multiplex_ratio) refers to driver_ssd1306.o(.text.ssd1306_set_multiplex_ratio) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display) refers to driver_ssd1306.o(.text.ssd1306_set_display) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_set_page_address) refers to driver_ssd1306.o(.rodata.str1.1) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_page_address) refers to driver_ssd1306.o(.text.ssd1306_set_page_address) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_scan_direction) refers to driver_ssd1306.o(.text.ssd1306_set_scan_direction) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_offset) refers to driver_ssd1306.o(.text.ssd1306_set_display_offset) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_clock) refers to driver_ssd1306.o(.text.ssd1306_set_display_clock) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_zoom_in) refers to driver_ssd1306.o(.text.ssd1306_set_zoom_in) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_precharge_period) refers to driver_ssd1306.o(.text.ssd1306_set_precharge_period) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_com_pins_hardware_conf) refers to driver_ssd1306.o(.text.ssd1306_set_com_pins_hardware_conf) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_deselect_level) refers to driver_ssd1306.o(.text.ssd1306_set_deselect_level) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_write_cmd) refers to driver_ssd1306.o(.text.ssd1306_write_cmd) for [Anonymous Symbol]
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_write_data) refers to driver_ssd1306.o(.text.ssd1306_write_data) for [Anonymous Symbol]
+    driver_ssd1306.o(.text.ssd1306_info) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    driver_ssd1306.o(.ARM.exidx.text.ssd1306_info) refers to driver_ssd1306.o(.text.ssd1306_info) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_iic_init) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_init) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_iic_deinit) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_deinit) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write) refers to driver_ssd1306_interface_mspm0.o(.text.a_iic_send_byte) for a_iic_send_byte
+    driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write) refers to driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack) for a_iic_wait_ack
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_iic_write) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.a_iic_send_byte) refers to driver_ssd1306_interface_mspm0.o(.text.a_iic_send_byte) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.a_iic_wait_ack) refers to driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_init) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_init) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_deinit) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_deinit) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_write_cmd) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_write_cmd) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_delay_ms) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_delay_ms) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_debug_print) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_debug_print) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_cmd_data_gpio_init) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_cmd_data_gpio_init) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_cmd_data_gpio_deinit) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_cmd_data_gpio_deinit) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_cmd_data_gpio_write) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_cmd_data_gpio_write) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_reset_gpio_init) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_init) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_reset_gpio_deinit) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_deinit) for [Anonymous Symbol]
+    driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_reset_gpio_write) refers to driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_write) for [Anonymous Symbol]
     ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for SYSCFG_DL_initPower
     ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for SYSCFG_DL_GPIO_init
     ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for SYSCFG_DL_SYSCTL_init
@@ -167,6 +272,7 @@ Section Cross References
     dl_timer.o(.ARM.exidx.text.DL_TimerA_saveConfiguration) refers to dl_timer.o(.text.DL_TimerA_saveConfiguration) for [Anonymous Symbol]
     dl_timer.o(.ARM.exidx.text.DL_TimerA_restoreConfiguration) refers to dl_timer.o(.text.DL_TimerA_restoreConfiguration) for [Anonymous Symbol]
     dl_timer.o(.ARM.exidx.text.DL_Timer_configQEIHallInputMode) refers to dl_timer.o(.text.DL_Timer_configQEIHallInputMode) for [Anonymous Symbol]
+    rt_memcpy.o(.text) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     faddsub.o(x$fpl$fadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
     faddsub.o(x$fpl$fadd) refers to faddsub.o(x$fpl$fsub) for _fsub1
@@ -345,11 +451,11 @@ Removing Unused input sections from the image.
     Removing pid_delta.o(.text), (0 bytes).
     Removing pid_delta.o(.text.pid_delta_init), (18 bytes).
     Removing pid_delta.o(.ARM.exidx.text.pid_delta_init), (8 bytes).
-    Removing pid_delta.o(.text.buck_pid_delta_init), (68 bytes).
+    Removing pid_delta.o(.text.buck_pid_delta_init), (72 bytes).
     Removing pid_delta.o(.ARM.exidx.text.buck_pid_delta_init), (8 bytes).
-    Removing pid_delta.o(.text.buck_single_pid_delta_init), (40 bytes).
+    Removing pid_delta.o(.text.buck_single_pid_delta_init), (44 bytes).
     Removing pid_delta.o(.ARM.exidx.text.buck_single_pid_delta_init), (8 bytes).
-    Removing pid_delta.o(.text.boost_single_pid_delta_init), (40 bytes).
+    Removing pid_delta.o(.text.boost_single_pid_delta_init), (44 bytes).
     Removing pid_delta.o(.ARM.exidx.text.boost_single_pid_delta_init), (8 bytes).
     Removing pid_delta.o(.ARM.exidx.text.pid_delta_step), (8 bytes).
     Removing pid_delta.o(.text.buck_pid_delta_update), (176 bytes).
@@ -358,6 +464,121 @@ Removing Unused input sections from the image.
     Removing pid_delta.o(.text.boost_single_pid_delta_update), (116 bytes).
     Removing pid_delta.o(.ARM.exidx.text.boost_single_pid_delta_update), (8 bytes).
     Removing pid_delta.o(.data.buckOuterCounter), (4 bytes).
+    Removing driver_ssd1306.o(.text), (0 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_clear), (8 bytes).
+    Removing driver_ssd1306.o(.text.a_ssd1306_write_byte), (78 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.a_ssd1306_write_byte), (8 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_update), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_write_point), (336 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_write_point), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_read_point), (76 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_read_point), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_gram_write_point), (84 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_write_point), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_gram_read_point), (76 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_read_point), (8 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_write_string), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_gram_write_cn_char), (308 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_write_cn_char), (8 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_fill_rect), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_gram_draw_picture), (196 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_gram_draw_picture), (8 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_init), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_deinit), (384 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_deinit), (8 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_interface), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_get_interface), (18 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_get_interface), (8 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_addr_pin), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_get_addr_pin), (18 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_get_addr_pin), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_low_column_start_address), (104 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_low_column_start_address), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_high_column_start_address), (108 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_high_column_start_address), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_memory_addressing_mode), (90 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_memory_addressing_mode), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_column_address_range), (132 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_column_address_range), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_page_address_range), (128 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_page_address_range), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_fade_blinking_mode), (140 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_fade_blinking_mode), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_right_horizontal_scroll), (212 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_right_horizontal_scroll), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_left_horizontal_scroll), (144 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_left_horizontal_scroll), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_vertical_right_horizontal_scroll), (160 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_vertical_right_horizontal_scroll), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_vertical_left_horizontal_scroll), (160 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_vertical_left_horizontal_scroll), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_deactivate_scroll), (88 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_deactivate_scroll), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_activate_scroll), (88 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_activate_scroll), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_display_start_line), (132 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_start_line), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_contrast), (90 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_contrast), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_charge_pump), (96 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_charge_pump), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_segment_remap), (136 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_segment_remap), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_vertical_scroll_area), (232 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_vertical_scroll_area), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_entire_display), (136 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_entire_display), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_display_mode), (136 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_mode), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_multiplex_ratio), (192 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_multiplex_ratio), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_display), (136 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_page_address), (108 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_page_address), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_scan_direction), (136 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_scan_direction), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_display_offset), (136 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_offset), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_display_clock), (204 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_display_clock), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_zoom_in), (90 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_zoom_in), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_precharge_period), (196 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_precharge_period), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_com_pins_hardware_conf), (98 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_com_pins_hardware_conf), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_set_deselect_level), (92 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_set_deselect_level), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_write_cmd), (86 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_write_cmd), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_write_data), (86 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_write_data), (8 bytes).
+    Removing driver_ssd1306.o(.text.ssd1306_info), (200 bytes).
+    Removing driver_ssd1306.o(.ARM.exidx.text.ssd1306_info), (8 bytes).
+    Removing driver_ssd1306.o(.rodata.gsc_ssd1306_chinese_1608), (96 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.text), (0 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_iic_init), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_iic_deinit), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_iic_write), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.a_iic_send_byte), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.a_iic_wait_ack), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_init), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_deinit), (4 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_deinit), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_write_cmd), (4 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_write_cmd), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_delay_ms), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_debug_print), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_cmd_data_gpio_init), (4 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_cmd_data_gpio_init), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_cmd_data_gpio_deinit), (4 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_cmd_data_gpio_deinit), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_cmd_data_gpio_write), (4 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_spi_cmd_data_gpio_write), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_reset_gpio_init), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_reset_gpio_deinit), (8 bytes).
+    Removing driver_ssd1306_interface_mspm0.o(.ARM.exidx.text.ssd1306_interface_reset_gpio_write), (8 bytes).
     Removing ti_msp_dl_config.o(.text), (0 bytes).
     Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_init), (8 bytes).
     Removing ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_initPower), (8 bytes).
@@ -462,7 +683,7 @@ Removing Unused input sections from the image.
     Removing dl_timer.o(.ARM.exidx.text.DL_Timer_configQEIHallInputMode), (8 bytes).
     Removing dl_timer.o(.rodata..Lswitch.table.DL_Timer_initCompareMode), (12 bytes).
 
-143 unused section(s) (total 4556 bytes) removed from the image.
+258 unused section(s) (total 11050 bytes) removed from the image.
 
 ==============================================================================
 
@@ -505,6 +726,9 @@ Image Symbol Table
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
@@ -540,6 +764,8 @@ Image Symbol Table
     dl_adc12.c                               0x00000000   Number         0  dl_adc12.o ABSOLUTE
     dl_common.c                              0x00000000   Number         0  dl_common.o ABSOLUTE
     dl_timer.c                               0x00000000   Number         0  dl_timer.o ABSOLUTE
+    driver_ssd1306.c                         0x00000000   Number         0  driver_ssd1306.o ABSOLUTE
+    driver_ssd1306_interface_mspm0.c         0x00000000   Number         0  driver_ssd1306_interface_mspm0.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     pid.c                                    0x00000000   Number         0  pid.o ABSOLUTE
     pid_delta.c                              0x00000000   Number         0  pid_delta.o ABSOLUTE
@@ -593,123 +819,191 @@ Image Symbol Table
     .ARM.Collect$$rtexit$$00000003           0x00000160   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
     .ARM.Collect$$rtexit$$00000004           0x00000164   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
     .text                                    0x0000016c   Section       44  startup_mspm0g350x_uvision.o(.text)
-    .text                                    0x00000198   Section        0  heapauxi.o(.text)
-    .text                                    0x000001a0   Section        0  fdiv.o(.text)
-    .text                                    0x00000300   Section        0  ffixui.o(.text)
-    .text                                    0x00000330   Section        0  fflti.o(.text)
-    .text                                    0x00000390   Section        0  fcmpin.o(.text)
-    .text                                    0x000003f4   Section       62  sys_stackheap_outer.o(.text)
-    .text                                    0x00000432   Section        0  exit.o(.text)
-    .text                                    0x00000442   Section        0  cmpret.o(.text)
-    .text                                    0x00000470   Section        0  fnan2.o(.text)
-    .text                                    0x00000480   Section        8  libspace.o(.text)
-    .text                                    0x00000488   Section        0  retnan.o(.text)
-    .text                                    0x000004e8   Section        0  sys_exit.o(.text)
-    .text                                    0x000004f4   Section        2  use_no_semi.o(.text)
-    .text                                    0x000004f6   Section        0  indicate_semi.o(.text)
-    [Anonymous Symbol]                       0x000004f8   Section        0  main.o(.text.ADC0_IRQHandler)
-    __arm_cp.4_0                             0x00000544   Number         4  main.o(.text.ADC0_IRQHandler)
-    __arm_cp.4_1                             0x00000548   Number         4  main.o(.text.ADC0_IRQHandler)
-    __arm_cp.4_2                             0x0000054c   Number         4  main.o(.text.ADC0_IRQHandler)
-    __arm_cp.4_3                             0x00000550   Number         4  main.o(.text.ADC0_IRQHandler)
-    __arm_cp.4_4                             0x00000554   Number         4  main.o(.text.ADC0_IRQHandler)
-    __arm_cp.4_5                             0x00000558   Number         4  main.o(.text.ADC0_IRQHandler)
-    [Anonymous Symbol]                       0x0000055c   Section        0  dl_adc12.o(.text.DL_ADC12_setClockConfig)
-    __arm_cp.0_0                             0x00000594   Number         4  dl_adc12.o(.text.DL_ADC12_setClockConfig)
-    __arm_cp.0_1                             0x00000598   Number         4  dl_adc12.o(.text.DL_ADC12_setClockConfig)
-    [Anonymous Symbol]                       0x0000059c   Section        0  dl_common.o(.text.DL_Common_delayCycles)
-    [Anonymous Symbol]                       0x000005a8   Section        0  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_0                            0x0000069c   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_1                            0x000006a0   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_2                            0x000006a4   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_3                            0x000006a8   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_4                            0x000006ac   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_5                            0x000006b0   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    __arm_cp.38_6                            0x000006b4   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    [Anonymous Symbol]                       0x000006b8   Section        0  dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod)
-    __arm_cp.23_0                            0x000006d0   Number         4  dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod)
-    [Anonymous Symbol]                       0x000006d4   Section        0  dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl)
-    __arm_cp.25_0                            0x000006e8   Number         4  dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl)
-    [Anonymous Symbol]                       0x000006ec   Section        0  dl_timer.o(.text.DL_Timer_setCaptureCompareValue)
-    __arm_cp.3_0                             0x000006f8   Number         4  dl_timer.o(.text.DL_Timer_setCaptureCompareValue)
-    [Anonymous Symbol]                       0x000006fc   Section        0  dl_timer.o(.text.DL_Timer_setClockConfig)
-    __arm_cp.0_0                             0x00000714   Number         4  dl_timer.o(.text.DL_Timer_setClockConfig)
-    [Anonymous Symbol]                       0x00000718   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    __arm_cp.5_0                             0x00000760   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    __arm_cp.5_1                             0x00000764   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    __arm_cp.5_2                             0x00000768   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    __arm_cp.5_3                             0x0000076c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    __arm_cp.5_4                             0x00000770   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    __arm_cp.5_5                             0x00000774   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    [Anonymous Symbol]                       0x00000778   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    __arm_cp.2_0                             0x000007d8   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    __arm_cp.2_1                             0x000007dc   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    __arm_cp.2_2                             0x000007e0   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    __arm_cp.2_3                             0x000007e4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    __arm_cp.2_4                             0x000007e8   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    __arm_cp.2_5                             0x000007ec   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    [Anonymous Symbol]                       0x000007f0   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    __arm_cp.4_1                             0x00000848   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    __arm_cp.4_2                             0x0000084c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    __arm_cp.4_3                             0x00000850   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    __arm_cp.4_4                             0x00000854   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    __arm_cp.4_5                             0x00000858   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    __arm_cp.4_6                             0x0000085c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    [Anonymous Symbol]                       0x00000860   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
-    __arm_cp.3_0                             0x00000898   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
-    __arm_cp.3_1                             0x0000089c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
-    [Anonymous Symbol]                       0x000008a0   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init)
-    [Anonymous Symbol]                       0x000008a4   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_init)
-    __arm_cp.0_0                             0x000008c8   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_init)
-    [Anonymous Symbol]                       0x000008cc   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    __arm_cp.1_0                             0x000008f4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    __arm_cp.1_1                             0x000008f8   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    __arm_cp.1_2                             0x000008fc   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    __arm_cp.1_3                             0x00000900   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    __arm_cp.1_4                             0x00000904   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    __arm_cp.1_5                             0x00000908   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    [Anonymous Symbol]                       0x0000090c   Section        0  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_0                             0x00000958   Number         4  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_1                             0x0000095c   Number         4  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_2                             0x00000960   Number         4  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_3                             0x00000964   Number         4  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_4                             0x00000968   Number         4  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_5                             0x0000096c   Number         4  main.o(.text.TIMA0_IRQHandler)
-    __arm_cp.5_6                             0x00000970   Number         4  main.o(.text.TIMA0_IRQHandler)
-    [Anonymous Symbol]                       0x00000974   Section        0  pid_delta.o(.text.buck_single_pid_delta_update)
-    __arm_cp.6_0                             0x000009d8   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
-    __arm_cp.6_1                             0x000009dc   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
-    __arm_cp.6_2                             0x000009e0   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
-    __arm_cp.6_3                             0x000009e4   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
-    [Anonymous Symbol]                       0x000009e8   Section        0  main.o(.text.main)
-    __arm_cp.6_0                             0x00000a04   Number         4  main.o(.text.main)
-    __arm_cp.6_1                             0x00000a08   Number         4  main.o(.text.main)
-    [Anonymous Symbol]                       0x00000a0c   Section        0  pid_delta.o(.text.pid_delta_step)
-    i._fgeq                                  0x00000ace   Section        0  fcmp.o(i._fgeq)
-    i._fgr                                   0x00000ae4   Section        0  fcmp.o(i._fgr)
-    i._fls                                   0x00000afa   Section        0  fcmp.o(i._fls)
-    x$fpl$fadd                               0x00000b10   Section      140  faddsub.o(x$fpl$fadd)
-    _fadd1                                   0x00000b1d   Thumb Code     0  faddsub.o(x$fpl$fadd)
-    x$fpl$fgeqf                              0x00000b9c   Section       84  fgef.o(x$fpl$fgeqf)
-    x$fpl$fleqf                              0x00000bf0   Section       84  flef.o(x$fpl$fleqf)
-    x$fpl$fmul                               0x00000c44   Section      176  fmul.o(x$fpl$fmul)
-    x$fpl$fsub                               0x00000cf4   Section      208  faddsub.o(x$fpl$fsub)
-    _fsub1                                   0x00000d01   Thumb Code     0  faddsub.o(x$fpl$fsub)
-    fdiv_tab                                 0x00000dc4   Data          64  fdiv.o(.constdata)
-    .constdata                               0x00000dc4   Section       64  fdiv.o(.constdata)
-    x$fpl$usenofp                            0x00000dc4   Section        0  usenofp.o(x$fpl$usenofp)
-    gADC_SENSEClockConfig                    0x00000e04   Data           8  ti_msp_dl_config.o(.rodata.gADC_SENSEClockConfig)
-    [Anonymous Symbol]                       0x00000e04   Section        0  ti_msp_dl_config.o(.rodata.gADC_SENSEClockConfig)
-    gPWM_CHGClockConfig                      0x00000e0c   Data           3  ti_msp_dl_config.o(.rodata.gPWM_CHGClockConfig)
-    [Anonymous Symbol]                       0x00000e0c   Section        0  ti_msp_dl_config.o(.rodata.gPWM_CHGClockConfig)
-    gPWM_CHGConfig                           0x00000e10   Data           8  ti_msp_dl_config.o(.rodata.gPWM_CHGConfig)
-    [Anonymous Symbol]                       0x00000e10   Section        0  ti_msp_dl_config.o(.rodata.gPWM_CHGConfig)
+    .text                                    0x00000198   Section        0  rt_memclr.o(.text)
+    .text                                    0x000001d8   Section        0  heapauxi.o(.text)
+    .text                                    0x000001e0   Section        0  fdiv.o(.text)
+    .text                                    0x00000340   Section        0  ffixui.o(.text)
+    .text                                    0x00000370   Section        0  fflti.o(.text)
+    .text                                    0x000003d0   Section        0  fcmpin.o(.text)
+    .text                                    0x00000434   Section       62  sys_stackheap_outer.o(.text)
+    .text                                    0x00000472   Section        0  exit.o(.text)
+    .text                                    0x00000482   Section        0  cmpret.o(.text)
+    .text                                    0x000004b0   Section        0  fnan2.o(.text)
+    .text                                    0x000004c0   Section        8  libspace.o(.text)
+    .text                                    0x000004c8   Section        0  retnan.o(.text)
+    .text                                    0x00000528   Section        0  sys_exit.o(.text)
+    .text                                    0x00000534   Section        2  use_no_semi.o(.text)
+    .text                                    0x00000536   Section        0  indicate_semi.o(.text)
+    [Anonymous Symbol]                       0x00000538   Section        0  main.o(.text.ADC0_IRQHandler)
+    __arm_cp.4_0                             0x00000540   Number         4  main.o(.text.ADC0_IRQHandler)
+    [Anonymous Symbol]                       0x00000544   Section        0  dl_adc12.o(.text.DL_ADC12_setClockConfig)
+    __arm_cp.0_0                             0x0000057c   Number         4  dl_adc12.o(.text.DL_ADC12_setClockConfig)
+    __arm_cp.0_1                             0x00000580   Number         4  dl_adc12.o(.text.DL_ADC12_setClockConfig)
+    [Anonymous Symbol]                       0x00000584   Section        0  dl_common.o(.text.DL_Common_delayCycles)
+    [Anonymous Symbol]                       0x00000590   Section        0  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_0                            0x00000684   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_1                            0x00000688   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_2                            0x0000068c   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_3                            0x00000690   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_4                            0x00000694   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_5                            0x00000698   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    __arm_cp.38_6                            0x0000069c   Number         4  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    [Anonymous Symbol]                       0x000006a0   Section        0  dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod)
+    __arm_cp.23_0                            0x000006b8   Number         4  dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod)
+    [Anonymous Symbol]                       0x000006bc   Section        0  dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl)
+    __arm_cp.25_0                            0x000006d0   Number         4  dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl)
+    [Anonymous Symbol]                       0x000006d4   Section        0  dl_timer.o(.text.DL_Timer_setCaptureCompareValue)
+    __arm_cp.3_0                             0x000006e0   Number         4  dl_timer.o(.text.DL_Timer_setCaptureCompareValue)
+    [Anonymous Symbol]                       0x000006e4   Section        0  dl_timer.o(.text.DL_Timer_setClockConfig)
+    __arm_cp.0_0                             0x000006fc   Number         4  dl_timer.o(.text.DL_Timer_setClockConfig)
+    [Anonymous Symbol]                       0x00000700   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    __arm_cp.5_0                             0x00000748   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    __arm_cp.5_1                             0x0000074c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    __arm_cp.5_2                             0x00000750   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    __arm_cp.5_3                             0x00000754   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    __arm_cp.5_4                             0x00000758   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    __arm_cp.5_5                             0x0000075c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    [Anonymous Symbol]                       0x00000760   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    __arm_cp.2_0                             0x000007c0   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    __arm_cp.2_1                             0x000007c4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    __arm_cp.2_2                             0x000007c8   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    __arm_cp.2_3                             0x000007cc   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    __arm_cp.2_4                             0x000007d0   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    __arm_cp.2_5                             0x000007d4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    [Anonymous Symbol]                       0x000007d8   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_0                             0x00000830   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_1                             0x00000834   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_2                             0x00000838   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_3                             0x0000083c   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_4                             0x00000840   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_5                             0x00000844   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    __arm_cp.4_6                             0x00000848   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    [Anonymous Symbol]                       0x0000084c   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
+    __arm_cp.3_0                             0x00000884   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
+    __arm_cp.3_1                             0x00000888   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
+    [Anonymous Symbol]                       0x0000088c   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init)
+    [Anonymous Symbol]                       0x00000890   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_init)
+    __arm_cp.0_0                             0x000008b4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_init)
+    [Anonymous Symbol]                       0x000008b8   Section        0  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    __arm_cp.1_0                             0x000008e0   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    __arm_cp.1_1                             0x000008e4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    __arm_cp.1_2                             0x000008e8   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    __arm_cp.1_3                             0x000008ec   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    __arm_cp.1_4                             0x000008f0   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    __arm_cp.1_5                             0x000008f4   Number         4  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    [Anonymous Symbol]                       0x000008f8   Section        0  main.o(.text.TIMA0_IRQHandler)
+    __arm_cp.5_0                             0x00000910   Number         4  main.o(.text.TIMA0_IRQHandler)
+    __arm_cp.5_1                             0x00000914   Number         4  main.o(.text.TIMA0_IRQHandler)
+    a_iic_send_byte                          0x00000919   Thumb Code   252  driver_ssd1306_interface_mspm0.o(.text.a_iic_send_byte)
+    [Anonymous Symbol]                       0x00000918   Section        0  driver_ssd1306_interface_mspm0.o(.text.a_iic_send_byte)
+    a_iic_wait_ack                           0x00000a15   Thumb Code   404  driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack)
+    [Anonymous Symbol]                       0x00000a14   Section        0  driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack)
+    __arm_cp.4_0                             0x00000ba8   Number         4  driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack)
+    __arm_cp.4_1                             0x00000bac   Number         4  driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack)
+    __arm_cp.4_2                             0x00000bb0   Number         4  driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack)
+    __arm_cp.4_3                             0x00000bb4   Number         4  driver_ssd1306_interface_mspm0.o(.text.a_iic_wait_ack)
+    [Anonymous Symbol]                       0x00000bb8   Section        0  pid_delta.o(.text.buck_single_pid_delta_update)
+    __arm_cp.6_0                             0x00000c1c   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
+    __arm_cp.6_1                             0x00000c20   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
+    __arm_cp.6_2                             0x00000c24   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
+    __arm_cp.6_3                             0x00000c28   Number         4  pid_delta.o(.text.buck_single_pid_delta_update)
+    [Anonymous Symbol]                       0x00000c2c   Section        0  main.o(.text.main)
+    __arm_cp.6_0                             0x00000d48   Number         4  main.o(.text.main)
+    __arm_cp.6_1                             0x00000d4c   Number         4  main.o(.text.main)
+    __arm_cp.6_2                             0x00000d50   Number         4  main.o(.text.main)
+    __arm_cp.6_3                             0x00000d54   Number         4  main.o(.text.main)
+    __arm_cp.6_4                             0x00000d58   Number         4  main.o(.text.main)
+    __arm_cp.6_5                             0x00000d5c   Number         4  main.o(.text.main)
+    __arm_cp.6_6                             0x00000d60   Number         4  main.o(.text.main)
+    __arm_cp.6_7                             0x00000d64   Number         4  main.o(.text.main)
+    __arm_cp.6_8                             0x00000d68   Number         4  main.o(.text.main)
+    __arm_cp.6_9                             0x00000d6c   Number         4  main.o(.text.main)
+    __arm_cp.6_10                            0x00000d70   Number         4  main.o(.text.main)
+    __arm_cp.6_11                            0x00000d74   Number         4  main.o(.text.main)
+    __arm_cp.6_12                            0x00000d78   Number         4  main.o(.text.main)
+    __arm_cp.6_13                            0x00000d7c   Number         4  main.o(.text.main)
+    __arm_cp.6_14                            0x00000d80   Number         4  main.o(.text.main)
+    __arm_cp.6_15                            0x00000d84   Number         4  main.o(.text.main)
+    __arm_cp.6_17                            0x00000d90   Number         4  main.o(.text.main)
+    __arm_cp.6_18                            0x00000d94   Number         4  main.o(.text.main)
+    __arm_cp.6_19                            0x00000d98   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x00000d9c   Section        0  pid_delta.o(.text.pid_delta_step)
+    [Anonymous Symbol]                       0x00000e60   Section        0  driver_ssd1306.o(.text.ssd1306_clear)
+    [Anonymous Symbol]                       0x00000f98   Section        0  driver_ssd1306.o(.text.ssd1306_gram_fill_rect)
+    __arm_cp.9_0                             0x0000104c   Number         4  driver_ssd1306.o(.text.ssd1306_gram_fill_rect)
+    __arm_cp.9_1                             0x00001050   Number         4  driver_ssd1306.o(.text.ssd1306_gram_fill_rect)
+    __arm_cp.9_2                             0x00001054   Number         4  driver_ssd1306.o(.text.ssd1306_gram_fill_rect)
+    [Anonymous Symbol]                       0x00001058   Section        0  driver_ssd1306.o(.text.ssd1306_gram_update)
+    __arm_cp.2_0                             0x0000118c   Number         4  driver_ssd1306.o(.text.ssd1306_gram_update)
+    [Anonymous Symbol]                       0x00001190   Section        0  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    __arm_cp.7_0                             0x00001384   Number         4  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    __arm_cp.7_1                             0x00001388   Number         4  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    __arm_cp.7_2                             0x0000138c   Number         4  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    __arm_cp.7_3                             0x00001390   Number         4  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    __arm_cp.7_4                             0x00001394   Number         4  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    [Anonymous Symbol]                       0x00001398   Section        0  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_2                            0x00001540   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_5                            0x0000157c   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_6                            0x00001580   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_7                            0x00001584   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_8                            0x00001588   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_9                            0x0000158c   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_10                           0x00001590   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_11                           0x00001594   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_12                           0x00001598   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_13                           0x0000159c   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_14                           0x000015a0   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_15                           0x000015a4   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_16                           0x000015a8   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_17                           0x000015ac   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    __arm_cp.11_18                           0x000015b0   Number         4  driver_ssd1306.o(.text.ssd1306_init)
+    [Anonymous Symbol]                       0x000015b4   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_debug_print)
+    [Anonymous Symbol]                       0x000015b6   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_delay_ms)
+    [Anonymous Symbol]                       0x000015fa   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_deinit)
+    [Anonymous Symbol]                       0x00001600   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_init)
+    [Anonymous Symbol]                       0x00001620   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write)
+    __arm_cp.2_3                             0x00001984   Number         4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write)
+    __arm_cp.2_1                             0x00001a5c   Number         4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write)
+    __arm_cp.2_2                             0x00001a60   Number         4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write)
+    [Anonymous Symbol]                       0x00001a64   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_deinit)
+    [Anonymous Symbol]                       0x00001a68   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_init)
+    [Anonymous Symbol]                       0x00001a6c   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_write)
+    __arm_cp.15_0                            0x00001a84   Number         4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_write)
+    [Anonymous Symbol]                       0x00001a88   Section        0  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_init)
+    [Anonymous Symbol]                       0x00001a8c   Section        0  driver_ssd1306.o(.text.ssd1306_set_addr_pin)
+    [Anonymous Symbol]                       0x00001a9c   Section        0  driver_ssd1306.o(.text.ssd1306_set_interface)
+    i._fgeq                                  0x00001aac   Section        0  fcmp.o(i._fgeq)
+    i._fgr                                   0x00001ac2   Section        0  fcmp.o(i._fgr)
+    i._fls                                   0x00001ad8   Section        0  fcmp.o(i._fls)
+    x$fpl$fadd                               0x00001af0   Section      140  faddsub.o(x$fpl$fadd)
+    _fadd1                                   0x00001afd   Thumb Code     0  faddsub.o(x$fpl$fadd)
+    x$fpl$fgeqf                              0x00001b7c   Section       84  fgef.o(x$fpl$fgeqf)
+    x$fpl$fleqf                              0x00001bd0   Section       84  flef.o(x$fpl$fleqf)
+    x$fpl$fmul                               0x00001c24   Section      176  fmul.o(x$fpl$fmul)
+    x$fpl$fsub                               0x00001cd4   Section      208  faddsub.o(x$fpl$fsub)
+    _fsub1                                   0x00001ce1   Thumb Code     0  faddsub.o(x$fpl$fsub)
+    fdiv_tab                                 0x00001da4   Data          64  fdiv.o(.constdata)
+    .constdata                               0x00001da4   Section       64  fdiv.o(.constdata)
+    x$fpl$usenofp                            0x00001da4   Section        0  usenofp.o(x$fpl$usenofp)
+    gADC_SENSEClockConfig                    0x00001de4   Data           8  ti_msp_dl_config.o(.rodata.gADC_SENSEClockConfig)
+    [Anonymous Symbol]                       0x00001de4   Section        0  ti_msp_dl_config.o(.rodata.gADC_SENSEClockConfig)
+    gPWM_CHGClockConfig                      0x00001dec   Data           3  ti_msp_dl_config.o(.rodata.gPWM_CHGClockConfig)
+    [Anonymous Symbol]                       0x00001dec   Section        0  ti_msp_dl_config.o(.rodata.gPWM_CHGClockConfig)
+    gPWM_CHGConfig                           0x00001df0   Data           8  ti_msp_dl_config.o(.rodata.gPWM_CHGConfig)
+    [Anonymous Symbol]                       0x00001df0   Section        0  ti_msp_dl_config.o(.rodata.gPWM_CHGConfig)
+    gsc_ssd1306_ascii_1206                   0x00001df8   Data        1140  driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_1206)
+    [Anonymous Symbol]                       0x00001df8   Section        0  driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_1206)
+    gsc_ssd1306_ascii_1608                   0x0000226c   Data        1520  driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_1608)
+    [Anonymous Symbol]                       0x0000226c   Section        0  driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_1608)
+    gsc_ssd1306_ascii_2412                   0x0000285c   Data        3420  driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_2412)
+    [Anonymous Symbol]                       0x0000285c   Section        0  driver_ssd1306.o(.rodata.gsc_ssd1306_ascii_2412)
+    [Anonymous Symbol]                       0x000035b8   Section        0  driver_ssd1306.o(.rodata.str1.1)
     .bss                                     0x20200000   Section       96  libspace.o(.bss)
-    Heap_Mem                                 0x20200180   Data           0  startup_mspm0g350x_uvision.o(HEAP)
-    Stack_Mem                                0x20200180   Data         256  startup_mspm0g350x_uvision.o(STACK)
-    HEAP                                     0x20200180   Section        0  startup_mspm0g350x_uvision.o(HEAP)
-    STACK                                    0x20200180   Section      256  startup_mspm0g350x_uvision.o(STACK)
-    __initial_sp                             0x20200280   Data           0  startup_mspm0g350x_uvision.o(STACK)
+    Heap_Mem                                 0x202005b8   Data           0  startup_mspm0g350x_uvision.o(HEAP)
+    Stack_Mem                                0x202005b8   Data         256  startup_mspm0g350x_uvision.o(STACK)
+    HEAP                                     0x202005b8   Section        0  startup_mspm0g350x_uvision.o(HEAP)
+    STACK                                    0x202005b8   Section      256  startup_mspm0g350x_uvision.o(STACK)
+    __initial_sp                             0x202006b8   Data           0  startup_mspm0g350x_uvision.o(STACK)
 
     Global Symbols
 
@@ -827,69 +1121,92 @@ Image Symbol Table
     UART2_IRQHandler                         0x0000017b   Thumb Code     0  startup_mspm0g350x_uvision.o(.text)
     UART3_IRQHandler                         0x0000017b   Thumb Code     0  startup_mspm0g350x_uvision.o(.text)
     __user_initial_stackheap                 0x0000017d   Thumb Code    10  startup_mspm0g350x_uvision.o(.text)
-    __use_two_region_memory                  0x00000199   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow$2region                 0x0000019b   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand$2region                 0x0000019d   Thumb Code     2  heapauxi.o(.text)
-    __aeabi_fdiv                             0x000001a1   Thumb Code     0  fdiv.o(.text)
-    _fdiv                                    0x000001a1   Thumb Code   334  fdiv.o(.text)
-    _frdiv                                   0x000002ef   Thumb Code     8  fdiv.o(.text)
-    __aeabi_f2uiz                            0x00000301   Thumb Code     0  ffixui.o(.text)
-    _ffixu                                   0x00000301   Thumb Code    48  ffixui.o(.text)
-    __aeabi_i2f_normalise                    0x00000331   Thumb Code    72  fflti.o(.text)
-    __aeabi_i2f                              0x00000379   Thumb Code    16  fflti.o(.text)
-    _fflt                                    0x00000379   Thumb Code     0  fflti.o(.text)
-    __aeabi_ui2f                             0x00000389   Thumb Code     6  fflti.o(.text)
-    _ffltu                                   0x00000389   Thumb Code     0  fflti.o(.text)
-    __fpl_fcmp_InfNaN                        0x00000391   Thumb Code    96  fcmpin.o(.text)
-    __user_setup_stackheap                   0x000003f5   Thumb Code    62  sys_stackheap_outer.o(.text)
-    exit                                     0x00000433   Thumb Code    16  exit.o(.text)
-    __fpl_cmpreturn                          0x00000443   Thumb Code    46  cmpret.o(.text)
-    __fpl_fcheck_NaN2                        0x00000471   Thumb Code    10  fnan2.o(.text)
-    __user_libspace                          0x00000481   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x00000481   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x00000481   Thumb Code     0  libspace.o(.text)
-    __fpl_return_NaN                         0x00000489   Thumb Code    94  retnan.o(.text)
-    _sys_exit                                0x000004e9   Thumb Code     8  sys_exit.o(.text)
-    __I$use$semihosting                      0x000004f5   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x000004f5   Thumb Code     2  use_no_semi.o(.text)
-    __semihosting_library_function           0x000004f7   Thumb Code     0  indicate_semi.o(.text)
-    ADC0_IRQHandler                          0x000004f9   Thumb Code    76  main.o(.text.ADC0_IRQHandler)
-    DL_ADC12_setClockConfig                  0x0000055d   Thumb Code    64  dl_adc12.o(.text.DL_ADC12_setClockConfig)
-    DL_Common_delayCycles                    0x0000059d   Thumb Code    10  dl_common.o(.text.DL_Common_delayCycles)
-    DL_Timer_initFourCCPWMMode               0x000005a9   Thumb Code   272  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
-    DL_Timer_setCaptCompUpdateMethod         0x000006b9   Thumb Code    28  dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod)
-    DL_Timer_setCaptureCompareOutCtl         0x000006d5   Thumb Code    24  dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl)
-    DL_Timer_setCaptureCompareValue          0x000006ed   Thumb Code    16  dl_timer.o(.text.DL_Timer_setCaptureCompareValue)
-    DL_Timer_setClockConfig                  0x000006fd   Thumb Code    28  dl_timer.o(.text.DL_Timer_setClockConfig)
-    SYSCFG_DL_ADC_SENSE_init                 0x00000719   Thumb Code    72  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
-    SYSCFG_DL_GPIO_init                      0x00000779   Thumb Code    96  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
-    SYSCFG_DL_PWM_CHG_init                   0x000007f1   Thumb Code    88  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
-    SYSCFG_DL_SYSCTL_init                    0x00000861   Thumb Code    56  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
-    SYSCFG_DL_SYSTICK_init                   0x000008a1   Thumb Code     2  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init)
-    SYSCFG_DL_init                           0x000008a5   Thumb Code    36  ti_msp_dl_config.o(.text.SYSCFG_DL_init)
-    SYSCFG_DL_initPower                      0x000008cd   Thumb Code    40  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
-    TIMA0_IRQHandler                         0x0000090d   Thumb Code    76  main.o(.text.TIMA0_IRQHandler)
-    buck_single_pid_delta_update             0x00000975   Thumb Code   100  pid_delta.o(.text.buck_single_pid_delta_update)
-    main                                     0x000009e9   Thumb Code    28  main.o(.text.main)
-    pid_delta_step                           0x00000a0d   Thumb Code   194  pid_delta.o(.text.pid_delta_step)
-    __aeabi_fcmpge                           0x00000acf   Thumb Code     0  fcmp.o(i._fgeq)
-    _fgeq                                    0x00000acf   Thumb Code    22  fcmp.o(i._fgeq)
-    __aeabi_fcmpgt                           0x00000ae5   Thumb Code     0  fcmp.o(i._fgr)
-    _fgr                                     0x00000ae5   Thumb Code    22  fcmp.o(i._fgr)
-    __aeabi_fcmplt                           0x00000afb   Thumb Code     0  fcmp.o(i._fls)
-    _fls                                     0x00000afb   Thumb Code    22  fcmp.o(i._fls)
-    __aeabi_fadd                             0x00000b11   Thumb Code     0  faddsub.o(x$fpl$fadd)
-    _fadd                                    0x00000b11   Thumb Code   134  faddsub.o(x$fpl$fadd)
-    _fcmpge                                  0x00000b9d   Thumb Code    78  fgef.o(x$fpl$fgeqf)
-    __aeabi_cfcmple                          0x00000bf1   Thumb Code     0  flef.o(x$fpl$fleqf)
-    _fcmple                                  0x00000bf1   Thumb Code    78  flef.o(x$fpl$fleqf)
-    __aeabi_fmul                             0x00000c45   Thumb Code     0  fmul.o(x$fpl$fmul)
-    _fmul                                    0x00000c45   Thumb Code   172  fmul.o(x$fpl$fmul)
-    __aeabi_fsub                             0x00000cf5   Thumb Code     0  faddsub.o(x$fpl$fsub)
-    _fsub                                    0x00000cf5   Thumb Code   204  faddsub.o(x$fpl$fsub)
-    __I$use$fp                               0x00000dc4   Number         0  usenofp.o(x$fpl$usenofp)
-    Region$$Table$$Base                      0x00000e18   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000e28   Number         0  anon$$obj.o(Region$$Table)
+    _memset_w                                0x00000199   Thumb Code    26  rt_memclr.o(.text)
+    _memset                                  0x000001b3   Thumb Code    30  rt_memclr.o(.text)
+    __aeabi_memclr                           0x000001d1   Thumb Code     4  rt_memclr.o(.text)
+    __rt_memclr                              0x000001d1   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr4                          0x000001d5   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr8                          0x000001d5   Thumb Code     0  rt_memclr.o(.text)
+    __rt_memclr_w                            0x000001d5   Thumb Code     4  rt_memclr.o(.text)
+    __use_two_region_memory                  0x000001d9   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x000001db   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x000001dd   Thumb Code     2  heapauxi.o(.text)
+    __aeabi_fdiv                             0x000001e1   Thumb Code     0  fdiv.o(.text)
+    _fdiv                                    0x000001e1   Thumb Code   334  fdiv.o(.text)
+    _frdiv                                   0x0000032f   Thumb Code     8  fdiv.o(.text)
+    __aeabi_f2uiz                            0x00000341   Thumb Code     0  ffixui.o(.text)
+    _ffixu                                   0x00000341   Thumb Code    48  ffixui.o(.text)
+    __aeabi_i2f_normalise                    0x00000371   Thumb Code    72  fflti.o(.text)
+    __aeabi_i2f                              0x000003b9   Thumb Code    16  fflti.o(.text)
+    _fflt                                    0x000003b9   Thumb Code     0  fflti.o(.text)
+    __aeabi_ui2f                             0x000003c9   Thumb Code     6  fflti.o(.text)
+    _ffltu                                   0x000003c9   Thumb Code     0  fflti.o(.text)
+    __fpl_fcmp_InfNaN                        0x000003d1   Thumb Code    96  fcmpin.o(.text)
+    __user_setup_stackheap                   0x00000435   Thumb Code    62  sys_stackheap_outer.o(.text)
+    exit                                     0x00000473   Thumb Code    16  exit.o(.text)
+    __fpl_cmpreturn                          0x00000483   Thumb Code    46  cmpret.o(.text)
+    __fpl_fcheck_NaN2                        0x000004b1   Thumb Code    10  fnan2.o(.text)
+    __user_libspace                          0x000004c1   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000004c1   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000004c1   Thumb Code     0  libspace.o(.text)
+    __fpl_return_NaN                         0x000004c9   Thumb Code    94  retnan.o(.text)
+    _sys_exit                                0x00000529   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x00000535   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x00000535   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x00000537   Thumb Code     0  indicate_semi.o(.text)
+    ADC0_IRQHandler                          0x00000539   Thumb Code     8  main.o(.text.ADC0_IRQHandler)
+    DL_ADC12_setClockConfig                  0x00000545   Thumb Code    64  dl_adc12.o(.text.DL_ADC12_setClockConfig)
+    DL_Common_delayCycles                    0x00000585   Thumb Code    10  dl_common.o(.text.DL_Common_delayCycles)
+    DL_Timer_initFourCCPWMMode               0x00000591   Thumb Code   272  dl_timer.o(.text.DL_Timer_initFourCCPWMMode)
+    DL_Timer_setCaptCompUpdateMethod         0x000006a1   Thumb Code    28  dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod)
+    DL_Timer_setCaptureCompareOutCtl         0x000006bd   Thumb Code    24  dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl)
+    DL_Timer_setCaptureCompareValue          0x000006d5   Thumb Code    16  dl_timer.o(.text.DL_Timer_setCaptureCompareValue)
+    DL_Timer_setClockConfig                  0x000006e5   Thumb Code    28  dl_timer.o(.text.DL_Timer_setClockConfig)
+    SYSCFG_DL_ADC_SENSE_init                 0x00000701   Thumb Code    72  ti_msp_dl_config.o(.text.SYSCFG_DL_ADC_SENSE_init)
+    SYSCFG_DL_GPIO_init                      0x00000761   Thumb Code    96  ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init)
+    SYSCFG_DL_PWM_CHG_init                   0x000007d9   Thumb Code    88  ti_msp_dl_config.o(.text.SYSCFG_DL_PWM_CHG_init)
+    SYSCFG_DL_SYSCTL_init                    0x0000084d   Thumb Code    56  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init)
+    SYSCFG_DL_SYSTICK_init                   0x0000088d   Thumb Code     2  ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init)
+    SYSCFG_DL_init                           0x00000891   Thumb Code    36  ti_msp_dl_config.o(.text.SYSCFG_DL_init)
+    SYSCFG_DL_initPower                      0x000008b9   Thumb Code    40  ti_msp_dl_config.o(.text.SYSCFG_DL_initPower)
+    TIMA0_IRQHandler                         0x000008f9   Thumb Code    24  main.o(.text.TIMA0_IRQHandler)
+    buck_single_pid_delta_update             0x00000bb9   Thumb Code   100  pid_delta.o(.text.buck_single_pid_delta_update)
+    main                                     0x00000c2d   Thumb Code   284  main.o(.text.main)
+    pid_delta_step                           0x00000d9d   Thumb Code   194  pid_delta.o(.text.pid_delta_step)
+    ssd1306_clear                            0x00000e61   Thumb Code   312  driver_ssd1306.o(.text.ssd1306_clear)
+    ssd1306_gram_fill_rect                   0x00000f99   Thumb Code   180  driver_ssd1306.o(.text.ssd1306_gram_fill_rect)
+    ssd1306_gram_update                      0x00001059   Thumb Code   308  driver_ssd1306.o(.text.ssd1306_gram_update)
+    ssd1306_gram_write_string                0x00001191   Thumb Code   500  driver_ssd1306.o(.text.ssd1306_gram_write_string)
+    ssd1306_init                             0x00001399   Thumb Code   344  driver_ssd1306.o(.text.ssd1306_init)
+    ssd1306_interface_debug_print            0x000015b5   Thumb Code     2  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_debug_print)
+    ssd1306_interface_delay_ms               0x000015b7   Thumb Code    68  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_delay_ms)
+    ssd1306_interface_iic_deinit             0x000015fb   Thumb Code     4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_deinit)
+    ssd1306_interface_iic_init               0x00001601   Thumb Code    32  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_init)
+    ssd1306_interface_iic_write              0x00001621   Thumb Code  1084  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_iic_write)
+    ssd1306_interface_reset_gpio_deinit      0x00001a65   Thumb Code     4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_deinit)
+    ssd1306_interface_reset_gpio_init        0x00001a69   Thumb Code     4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_init)
+    ssd1306_interface_reset_gpio_write       0x00001a6d   Thumb Code    24  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_reset_gpio_write)
+    ssd1306_interface_spi_init               0x00001a89   Thumb Code     4  driver_ssd1306_interface_mspm0.o(.text.ssd1306_interface_spi_init)
+    ssd1306_set_addr_pin                     0x00001a8d   Thumb Code    16  driver_ssd1306.o(.text.ssd1306_set_addr_pin)
+    ssd1306_set_interface                    0x00001a9d   Thumb Code    16  driver_ssd1306.o(.text.ssd1306_set_interface)
+    __aeabi_fcmpge                           0x00001aad   Thumb Code     0  fcmp.o(i._fgeq)
+    _fgeq                                    0x00001aad   Thumb Code    22  fcmp.o(i._fgeq)
+    __aeabi_fcmpgt                           0x00001ac3   Thumb Code     0  fcmp.o(i._fgr)
+    _fgr                                     0x00001ac3   Thumb Code    22  fcmp.o(i._fgr)
+    __aeabi_fcmplt                           0x00001ad9   Thumb Code     0  fcmp.o(i._fls)
+    _fls                                     0x00001ad9   Thumb Code    22  fcmp.o(i._fls)
+    __aeabi_fadd                             0x00001af1   Thumb Code     0  faddsub.o(x$fpl$fadd)
+    _fadd                                    0x00001af1   Thumb Code   134  faddsub.o(x$fpl$fadd)
+    _fcmpge                                  0x00001b7d   Thumb Code    78  fgef.o(x$fpl$fgeqf)
+    __aeabi_cfcmple                          0x00001bd1   Thumb Code     0  flef.o(x$fpl$fleqf)
+    _fcmple                                  0x00001bd1   Thumb Code    78  flef.o(x$fpl$fleqf)
+    __aeabi_fmul                             0x00001c25   Thumb Code     0  fmul.o(x$fpl$fmul)
+    _fmul                                    0x00001c25   Thumb Code   172  fmul.o(x$fpl$fmul)
+    __aeabi_fsub                             0x00001cd5   Thumb Code     0  faddsub.o(x$fpl$fsub)
+    _fsub                                    0x00001cd5   Thumb Code   204  faddsub.o(x$fpl$fsub)
+    __I$use$fp                               0x00001da4   Number         0  usenofp.o(x$fpl$usenofp)
+    Region$$Table$$Base                      0x00003960   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00003970   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20200000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20200060   Data           0  libspace.o(.bss)
     buckpid                                  0x20200060   Data          84  main.o(.bss.buckpid)
@@ -897,6 +1214,7 @@ Image Symbol Table
     gIsense_adcV                             0x202000b8   Data           4  main.o(.bss.gIsense_adcV)
     gPWM_CHGBackup                           0x202000bc   Data         188  ti_msp_dl_config.o(.bss.gPWM_CHGBackup)
     gVsense_adcV                             0x20200178   Data           4  main.o(.bss.gVsense_adcV)
+    g_oled                                   0x2020017c   Data        1084  main.o(.bss.g_oled)
 
 
 
@@ -906,133 +1224,160 @@ Memory Map of the image
 
   Image Entry point : 0x000000c1
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000e28, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00003970, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000e28, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003970, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x000000c0   Data   RO          102    RESET               startup_mspm0g350x_uvision.o
-    0x000000c0   0x000000c0   0x00000008   Code   RO          231  * !!!main             c_p.l(__main.o)
-    0x000000c8   0x000000c8   0x00000054   Code   RO          440    !!!scatter          c_p.l(__scatter.o)
+    0x00000000   0x00000000   0x000000c0   Data   RO          254    RESET               startup_mspm0g350x_uvision.o
+    0x000000c0   0x000000c0   0x00000008   Code   RO          389  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x000000c8   0x00000054   Code   RO          598    !!!scatter          c_p.l(__scatter.o)
     0x0000011c   0x0000011c   0x00000004   PAD
-    0x00000120   0x00000120   0x00000002   Code   RO          441    !!handler_null      c_p.l(__scatter.o)
+    0x00000120   0x00000120   0x00000002   Code   RO          599    !!handler_null      c_p.l(__scatter.o)
     0x00000122   0x00000122   0x00000006   PAD
-    0x00000128   0x00000128   0x0000001c   Code   RO          444    !!handler_zi        c_p.l(__scatter_zi.o)
-    0x00000144   0x00000144   0x00000002   Code   RO          295    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          307    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          309    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          311    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          314    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          316    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          318    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          321    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          323    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          325    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          327    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          329    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          331    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          333    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          335    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          337    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          339    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          341    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          345    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          347    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          349    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000000   Code   RO          351    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
-    0x00000146   0x00000146   0x00000002   Code   RO          352    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
-    0x00000148   0x00000148   0x00000002   Code   RO          376    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO          391    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO          393    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO          396    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO          399    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO          401    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000000   Code   RO          404    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
-    0x0000014a   0x0000014a   0x00000002   Code   RO          405    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO          260    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
-    0x0000014c   0x0000014c   0x00000000   Code   RO          269    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
-    0x0000014c   0x0000014c   0x00000006   Code   RO          281    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
-    0x00000152   0x00000152   0x00000000   Code   RO          271    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
-    0x00000152   0x00000152   0x00000004   Code   RO          272    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
-    0x00000156   0x00000156   0x00000000   Code   RO          274    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
-    0x00000156   0x00000156   0x00000008   Code   RO          275    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
-    0x0000015e   0x0000015e   0x00000002   Code   RO          304    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
-    0x00000160   0x00000160   0x00000000   Code   RO          356    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
-    0x00000160   0x00000160   0x00000004   Code   RO          357    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
-    0x00000164   0x00000164   0x00000006   Code   RO          358    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x00000128   0x00000128   0x0000001c   Code   RO          602    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x00000144   0x00000144   0x00000002   Code   RO          453    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          465    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          467    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          469    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          472    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          474    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          476    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          479    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          481    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          483    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          485    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          487    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          489    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          491    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          493    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          495    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          497    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          499    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          503    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          505    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          507    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000000   Code   RO          509    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
+    0x00000146   0x00000146   0x00000002   Code   RO          510    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
+    0x00000148   0x00000148   0x00000002   Code   RO          534    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          549    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          551    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          554    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          557    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          559    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          562    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x0000014a   0x0000014a   0x00000002   Code   RO          563    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO          418    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x0000014c   0x0000014c   0x00000000   Code   RO          427    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x0000014c   0x0000014c   0x00000006   Code   RO          439    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x00000152   0x00000152   0x00000000   Code   RO          429    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x00000152   0x00000152   0x00000004   Code   RO          430    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x00000156   0x00000156   0x00000000   Code   RO          432    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x00000156   0x00000156   0x00000008   Code   RO          433    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x0000015e   0x0000015e   0x00000002   Code   RO          462    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000160   0x00000160   0x00000000   Code   RO          514    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000160   0x00000160   0x00000004   Code   RO          515    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x00000164   0x00000164   0x00000006   Code   RO          516    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x0000016a   0x0000016a   0x00000002   PAD
-    0x0000016c   0x0000016c   0x0000002c   Code   RO          103    .text               startup_mspm0g350x_uvision.o
-    0x00000198   0x00000198   0x00000006   Code   RO          229    .text               c_p.l(heapauxi.o)
-    0x0000019e   0x0000019e   0x00000002   PAD
-    0x000001a0   0x000001a0   0x00000160   Code   RO          251    .text               fz_ps.l(fdiv.o)
-    0x00000300   0x00000300   0x00000030   Code   RO          254    .text               fz_ps.l(ffixui.o)
-    0x00000330   0x00000330   0x0000005e   Code   RO          256    .text               fz_ps.l(fflti.o)
-    0x0000038e   0x0000038e   0x00000002   PAD
-    0x00000390   0x00000390   0x00000064   Code   RO          283    .text               fz_ps.l(fcmpin.o)
-    0x000003f4   0x000003f4   0x0000003e   Code   RO          285    .text               c_p.l(sys_stackheap_outer.o)
-    0x00000432   0x00000432   0x00000010   Code   RO          288    .text               c_p.l(exit.o)
-    0x00000442   0x00000442   0x0000002e   Code   RO          296    .text               fz_ps.l(cmpret.o)
-    0x00000470   0x00000470   0x00000010   Code   RO          298    .text               fz_ps.l(fnan2.o)
-    0x00000480   0x00000480   0x00000008   Code   RO          300    .text               c_p.l(libspace.o)
-    0x00000488   0x00000488   0x0000005e   Code   RO          353    .text               fz_ps.l(retnan.o)
-    0x000004e6   0x000004e6   0x00000002   PAD
-    0x000004e8   0x000004e8   0x0000000c   Code   RO          366    .text               c_p.l(sys_exit.o)
-    0x000004f4   0x000004f4   0x00000002   Code   RO          381    .text               c_p.l(use_no_semi.o)
-    0x000004f6   0x000004f6   0x00000000   Code   RO          383    .text               c_p.l(indicate_semi.o)
-    0x000004f6   0x000004f6   0x00000002   PAD
-    0x000004f8   0x000004f8   0x00000064   Code   RO           10    .text.ADC0_IRQHandler  main.o
-    0x0000055c   0x0000055c   0x00000040   Code   RO          110    .text.DL_ADC12_setClockConfig  driverlib.a(dl_adc12.o)
-    0x0000059c   0x0000059c   0x0000000a   Code   RO          122    .text.DL_Common_delayCycles  driverlib.a(dl_common.o)
-    0x000005a6   0x000005a6   0x00000002   PAD
-    0x000005a8   0x000005a8   0x00000110   Code   RO          207    .text.DL_Timer_initFourCCPWMMode  driverlib.a(dl_timer.o)
-    0x000006b8   0x000006b8   0x0000001c   Code   RO          177    .text.DL_Timer_setCaptCompUpdateMethod  driverlib.a(dl_timer.o)
-    0x000006d4   0x000006d4   0x00000018   Code   RO          181    .text.DL_Timer_setCaptureCompareOutCtl  driverlib.a(dl_timer.o)
-    0x000006ec   0x000006ec   0x00000010   Code   RO          137    .text.DL_Timer_setCaptureCompareValue  driverlib.a(dl_timer.o)
-    0x000006fc   0x000006fc   0x0000001c   Code   RO          131    .text.DL_Timer_setClockConfig  driverlib.a(dl_timer.o)
-    0x00000718   0x00000718   0x00000060   Code   RO           81    .text.SYSCFG_DL_ADC_SENSE_init  ti_msp_dl_config.o
-    0x00000778   0x00000778   0x00000078   Code   RO           75    .text.SYSCFG_DL_GPIO_init  ti_msp_dl_config.o
-    0x000007f0   0x000007f0   0x00000070   Code   RO           79    .text.SYSCFG_DL_PWM_CHG_init  ti_msp_dl_config.o
-    0x00000860   0x00000860   0x00000040   Code   RO           77    .text.SYSCFG_DL_SYSCTL_init  ti_msp_dl_config.o
-    0x000008a0   0x000008a0   0x00000002   Code   RO           83    .text.SYSCFG_DL_SYSTICK_init  ti_msp_dl_config.o
-    0x000008a2   0x000008a2   0x00000002   PAD
-    0x000008a4   0x000008a4   0x00000028   Code   RO           71    .text.SYSCFG_DL_init  ti_msp_dl_config.o
-    0x000008cc   0x000008cc   0x00000040   Code   RO           73    .text.SYSCFG_DL_initPower  ti_msp_dl_config.o
-    0x0000090c   0x0000090c   0x00000068   Code   RO           12    .text.TIMA0_IRQHandler  main.o
-    0x00000974   0x00000974   0x00000074   Code   RO           58    .text.buck_single_pid_delta_update  pid_delta.o
-    0x000009e8   0x000009e8   0x00000024   Code   RO           14    .text.main          main.o
-    0x00000a0c   0x00000a0c   0x000000c2   Code   RO           54    .text.pid_delta_step  pid_delta.o
-    0x00000ace   0x00000ace   0x00000016   Code   RO          240    i._fgeq             fz_ps.l(fcmp.o)
-    0x00000ae4   0x00000ae4   0x00000016   Code   RO          241    i._fgr              fz_ps.l(fcmp.o)
-    0x00000afa   0x00000afa   0x00000016   Code   RO          243    i._fls              fz_ps.l(fcmp.o)
-    0x00000b10   0x00000b10   0x0000008c   Code   RO          233    x$fpl$fadd          fz_ps.l(faddsub.o)
-    0x00000b9c   0x00000b9c   0x00000054   Code   RO          263    x$fpl$fgeqf         fz_ps.l(fgef.o)
-    0x00000bf0   0x00000bf0   0x00000054   Code   RO          265    x$fpl$fleqf         fz_ps.l(flef.o)
-    0x00000c44   0x00000c44   0x000000b0   Code   RO          258    x$fpl$fmul          fz_ps.l(fmul.o)
-    0x00000cf4   0x00000cf4   0x000000d0   Code   RO          235    x$fpl$fsub          fz_ps.l(faddsub.o)
-    0x00000dc4   0x00000dc4   0x00000000   Code   RO          267    x$fpl$usenofp       fz_ps.l(usenofp.o)
-    0x00000dc4   0x00000dc4   0x00000040   Data   RO          252    .constdata          fz_ps.l(fdiv.o)
-    0x00000e04   0x00000e04   0x00000008   Data   RO           92    .rodata.gADC_SENSEClockConfig  ti_msp_dl_config.o
-    0x00000e0c   0x00000e0c   0x00000003   Data   RO           90    .rodata.gPWM_CHGClockConfig  ti_msp_dl_config.o
-    0x00000e0f   0x00000e0f   0x00000001   PAD
-    0x00000e10   0x00000e10   0x00000008   Data   RO           91    .rodata.gPWM_CHGConfig  ti_msp_dl_config.o
-    0x00000e18   0x00000e18   0x00000010   Data   RO          439    Region$$Table       anon$$obj.o
+    0x0000016c   0x0000016c   0x0000002c   Code   RO          255    .text               startup_mspm0g350x_uvision.o
+    0x00000198   0x00000198   0x00000040   Code   RO          385    .text               c_p.l(rt_memclr.o)
+    0x000001d8   0x000001d8   0x00000006   Code   RO          387    .text               c_p.l(heapauxi.o)
+    0x000001de   0x000001de   0x00000002   PAD
+    0x000001e0   0x000001e0   0x00000160   Code   RO          409    .text               fz_ps.l(fdiv.o)
+    0x00000340   0x00000340   0x00000030   Code   RO          412    .text               fz_ps.l(ffixui.o)
+    0x00000370   0x00000370   0x0000005e   Code   RO          414    .text               fz_ps.l(fflti.o)
+    0x000003ce   0x000003ce   0x00000002   PAD
+    0x000003d0   0x000003d0   0x00000064   Code   RO          441    .text               fz_ps.l(fcmpin.o)
+    0x00000434   0x00000434   0x0000003e   Code   RO          443    .text               c_p.l(sys_stackheap_outer.o)
+    0x00000472   0x00000472   0x00000010   Code   RO          446    .text               c_p.l(exit.o)
+    0x00000482   0x00000482   0x0000002e   Code   RO          454    .text               fz_ps.l(cmpret.o)
+    0x000004b0   0x000004b0   0x00000010   Code   RO          456    .text               fz_ps.l(fnan2.o)
+    0x000004c0   0x000004c0   0x00000008   Code   RO          458    .text               c_p.l(libspace.o)
+    0x000004c8   0x000004c8   0x0000005e   Code   RO          511    .text               fz_ps.l(retnan.o)
+    0x00000526   0x00000526   0x00000002   PAD
+    0x00000528   0x00000528   0x0000000c   Code   RO          524    .text               c_p.l(sys_exit.o)
+    0x00000534   0x00000534   0x00000002   Code   RO          539    .text               c_p.l(use_no_semi.o)
+    0x00000536   0x00000536   0x00000000   Code   RO          541    .text               c_p.l(indicate_semi.o)
+    0x00000536   0x00000536   0x00000002   PAD
+    0x00000538   0x00000538   0x0000000c   Code   RO           10    .text.ADC0_IRQHandler  main.o
+    0x00000544   0x00000544   0x00000040   Code   RO          262    .text.DL_ADC12_setClockConfig  driverlib.a(dl_adc12.o)
+    0x00000584   0x00000584   0x0000000a   Code   RO          274    .text.DL_Common_delayCycles  driverlib.a(dl_common.o)
+    0x0000058e   0x0000058e   0x00000002   PAD
+    0x00000590   0x00000590   0x00000110   Code   RO          359    .text.DL_Timer_initFourCCPWMMode  driverlib.a(dl_timer.o)
+    0x000006a0   0x000006a0   0x0000001c   Code   RO          329    .text.DL_Timer_setCaptCompUpdateMethod  driverlib.a(dl_timer.o)
+    0x000006bc   0x000006bc   0x00000018   Code   RO          333    .text.DL_Timer_setCaptureCompareOutCtl  driverlib.a(dl_timer.o)
+    0x000006d4   0x000006d4   0x00000010   Code   RO          289    .text.DL_Timer_setCaptureCompareValue  driverlib.a(dl_timer.o)
+    0x000006e4   0x000006e4   0x0000001c   Code   RO          283    .text.DL_Timer_setClockConfig  driverlib.a(dl_timer.o)
+    0x00000700   0x00000700   0x00000060   Code   RO          233    .text.SYSCFG_DL_ADC_SENSE_init  ti_msp_dl_config.o
+    0x00000760   0x00000760   0x00000078   Code   RO          227    .text.SYSCFG_DL_GPIO_init  ti_msp_dl_config.o
+    0x000007d8   0x000007d8   0x00000074   Code   RO          231    .text.SYSCFG_DL_PWM_CHG_init  ti_msp_dl_config.o
+    0x0000084c   0x0000084c   0x00000040   Code   RO          229    .text.SYSCFG_DL_SYSCTL_init  ti_msp_dl_config.o
+    0x0000088c   0x0000088c   0x00000002   Code   RO          235    .text.SYSCFG_DL_SYSTICK_init  ti_msp_dl_config.o
+    0x0000088e   0x0000088e   0x00000002   PAD
+    0x00000890   0x00000890   0x00000028   Code   RO          223    .text.SYSCFG_DL_init  ti_msp_dl_config.o
+    0x000008b8   0x000008b8   0x00000040   Code   RO          225    .text.SYSCFG_DL_initPower  ti_msp_dl_config.o
+    0x000008f8   0x000008f8   0x00000020   Code   RO           12    .text.TIMA0_IRQHandler  main.o
+    0x00000918   0x00000918   0x000000fc   Code   RO          189    .text.a_iic_send_byte  driver_ssd1306_interface_mspm0.o
+    0x00000a14   0x00000a14   0x000001a4   Code   RO          191    .text.a_iic_wait_ack  driver_ssd1306_interface_mspm0.o
+    0x00000bb8   0x00000bb8   0x00000074   Code   RO           59    .text.buck_single_pid_delta_update  pid_delta.o
+    0x00000c2c   0x00000c2c   0x00000170   Code   RO           14    .text.main          main.o
+    0x00000d9c   0x00000d9c   0x000000c2   Code   RO           55    .text.pid_delta_step  pid_delta.o
+    0x00000e5e   0x00000e5e   0x00000002   PAD
+    0x00000e60   0x00000e60   0x00000138   Code   RO           72    .text.ssd1306_clear  driver_ssd1306.o
+    0x00000f98   0x00000f98   0x000000c0   Code   RO           90    .text.ssd1306_gram_fill_rect  driver_ssd1306.o
+    0x00001058   0x00001058   0x00000138   Code   RO           76    .text.ssd1306_gram_update  driver_ssd1306.o
+    0x00001190   0x00001190   0x00000208   Code   RO           86    .text.ssd1306_gram_write_string  driver_ssd1306.o
+    0x00001398   0x00001398   0x0000021c   Code   RO           94    .text.ssd1306_init  driver_ssd1306.o
+    0x000015b4   0x000015b4   0x00000002   Code   RO          201    .text.ssd1306_interface_debug_print  driver_ssd1306_interface_mspm0.o
+    0x000015b6   0x000015b6   0x00000044   Code   RO          199    .text.ssd1306_interface_delay_ms  driver_ssd1306_interface_mspm0.o
+    0x000015fa   0x000015fa   0x00000004   Code   RO          185    .text.ssd1306_interface_iic_deinit  driver_ssd1306_interface_mspm0.o
+    0x000015fe   0x000015fe   0x00000002   PAD
+    0x00001600   0x00001600   0x00000020   Code   RO          183    .text.ssd1306_interface_iic_init  driver_ssd1306_interface_mspm0.o
+    0x00001620   0x00001620   0x00000444   Code   RO          187    .text.ssd1306_interface_iic_write  driver_ssd1306_interface_mspm0.o
+    0x00001a64   0x00001a64   0x00000004   Code   RO          211    .text.ssd1306_interface_reset_gpio_deinit  driver_ssd1306_interface_mspm0.o
+    0x00001a68   0x00001a68   0x00000004   Code   RO          209    .text.ssd1306_interface_reset_gpio_init  driver_ssd1306_interface_mspm0.o
+    0x00001a6c   0x00001a6c   0x0000001c   Code   RO          213    .text.ssd1306_interface_reset_gpio_write  driver_ssd1306_interface_mspm0.o
+    0x00001a88   0x00001a88   0x00000004   Code   RO          193    .text.ssd1306_interface_spi_init  driver_ssd1306_interface_mspm0.o
+    0x00001a8c   0x00001a8c   0x00000010   Code   RO          102    .text.ssd1306_set_addr_pin  driver_ssd1306.o
+    0x00001a9c   0x00001a9c   0x00000010   Code   RO           98    .text.ssd1306_set_interface  driver_ssd1306.o
+    0x00001aac   0x00001aac   0x00000016   Code   RO          398    i._fgeq             fz_ps.l(fcmp.o)
+    0x00001ac2   0x00001ac2   0x00000016   Code   RO          399    i._fgr              fz_ps.l(fcmp.o)
+    0x00001ad8   0x00001ad8   0x00000016   Code   RO          401    i._fls              fz_ps.l(fcmp.o)
+    0x00001aee   0x00001aee   0x00000002   PAD
+    0x00001af0   0x00001af0   0x0000008c   Code   RO          391    x$fpl$fadd          fz_ps.l(faddsub.o)
+    0x00001b7c   0x00001b7c   0x00000054   Code   RO          421    x$fpl$fgeqf         fz_ps.l(fgef.o)
+    0x00001bd0   0x00001bd0   0x00000054   Code   RO          423    x$fpl$fleqf         fz_ps.l(flef.o)
+    0x00001c24   0x00001c24   0x000000b0   Code   RO          416    x$fpl$fmul          fz_ps.l(fmul.o)
+    0x00001cd4   0x00001cd4   0x000000d0   Code   RO          393    x$fpl$fsub          fz_ps.l(faddsub.o)
+    0x00001da4   0x00001da4   0x00000000   Code   RO          425    x$fpl$usenofp       fz_ps.l(usenofp.o)
+    0x00001da4   0x00001da4   0x00000040   Data   RO          410    .constdata          fz_ps.l(fdiv.o)
+    0x00001de4   0x00001de4   0x00000008   Data   RO          244    .rodata.gADC_SENSEClockConfig  ti_msp_dl_config.o
+    0x00001dec   0x00001dec   0x00000003   Data   RO          242    .rodata.gPWM_CHGClockConfig  ti_msp_dl_config.o
+    0x00001def   0x00001def   0x00000001   PAD
+    0x00001df0   0x00001df0   0x00000008   Data   RO          243    .rodata.gPWM_CHGConfig  ti_msp_dl_config.o
+    0x00001df8   0x00001df8   0x00000474   Data   RO          172    .rodata.gsc_ssd1306_ascii_1206  driver_ssd1306.o
+    0x0000226c   0x0000226c   0x000005f0   Data   RO          173    .rodata.gsc_ssd1306_ascii_1608  driver_ssd1306.o
+    0x0000285c   0x0000285c   0x00000d5c   Data   RO          174    .rodata.gsc_ssd1306_ascii_2412  driver_ssd1306.o
+    0x000035b8   0x000035b8   0x000003a5   Data   RO          170    .rodata.str1.1      driver_ssd1306.o
+    0x0000395d   0x0000395d   0x00000003   PAD
+    0x00003960   0x00003960   0x00000010   Data   RO          597    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x20200000, Load base: 0x00000e28, Size: 0x00000280, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x20200000, Load base: 0x00003970, Size: 0x000006b8, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20200000        -       0x00000060   Zero   RW          301    .bss                c_p.l(libspace.o)
-    0x20200060        -       0x00000054   Zero   RW           20    .bss.buckpid        main.o
+    0x20200000        -       0x00000060   Zero   RW          459    .bss                c_p.l(libspace.o)
+    0x20200060        -       0x00000054   Zero   RW           21    .bss.buckpid        main.o
     0x202000b4        -       0x00000001   Zero   RW           17    .bss.gADC_ready     main.o
-    0x202000b5   0x00000e28   0x00000003   PAD
+    0x202000b5   0x00003970   0x00000003   PAD
     0x202000b8        -       0x00000004   Zero   RW           19    .bss.gIsense_adcV   main.o
-    0x202000bc        -       0x000000bc   Zero   RW           89    .bss.gPWM_CHGBackup  ti_msp_dl_config.o
+    0x202000bc        -       0x000000bc   Zero   RW          241    .bss.gPWM_CHGBackup  ti_msp_dl_config.o
     0x20200178        -       0x00000004   Zero   RW           18    .bss.gVsense_adcV   main.o
-    0x2020017c   0x00000e28   0x00000004   PAD
-    0x20200180        -       0x00000000   Zero   RW          101    HEAP                startup_mspm0g350x_uvision.o
-    0x20200180        -       0x00000100   Zero   RW          100    STACK               startup_mspm0g350x_uvision.o
+    0x2020017c        -       0x0000043c   Zero   RW           20    .bss.g_oled         main.o
+    0x202005b8        -       0x00000000   Zero   RW          253    HEAP                startup_mspm0g350x_uvision.o
+    0x202005b8        -       0x00000100   Zero   RW          252    STACK               startup_mspm0g350x_uvision.o
 
 
 
@@ -1058,15 +1403,17 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       240         60          0          0         93       8423   main.o
-       310         16          0          0          0       4715   pid_delta.o
+      1908        232       7013          0          0      42177   driver_ssd1306.o
+      1910         32          0          0          0      15017   driver_ssd1306_interface_mspm0.o
+       412         96          0          0       1177       9501   main.o
+       310         16          0          0          0       4785   pid_delta.o
         44         18        192          0        256        688   startup_mspm0g350x_uvision.o
-       498        108         19          0        188      26626   ti_msp_dl_config.o
+       502        112         19          0        188      26626   ti_msp_dl_config.o
 
     ----------------------------------------------------------------------
-      1094        202        228          0        544      40452   Object Totals
+      5092        506       7244          0       1624      98794   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-         2          0          1          0          7          0   (incl. Padding)
+         6          0          4          0          3          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1086,6 +1433,7 @@ Image component sizes
          2          0          0          0          0          0   libshutdown.o
          2          0          0          0          0          0   libshutdown2.o
          8          4          0          0         96         68   libspace.o
+        64          0          0          0          0        108   rt_memclr.o
          2          0          0          0          0          0   rtexit.o
         10          0          0          0          0          0   rtexit2.o
         12          4          0          0          0         60   sys_exit.o
@@ -1109,19 +1457,19 @@ Image component sizes
          0          0          0          0          0          0   usenofp.o
 
     ----------------------------------------------------------------------
-      2238        114         64          0         96      47045   Library Totals
-        22          4          0          0          0          0   (incl. Padding)
+      2304        114         64          0         96      47153   Library Totals
+        24          4          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-       266         18          0          0         96        548   c_p.l
+       330         18          0          0         96        656   c_p.l
        442         52          0          0          0      45393   driverlib.a
       1508         40         64          0          0       1104   fz_ps.l
 
     ----------------------------------------------------------------------
-      2238        114         64          0         96      47045   Library Totals
+      2304        114         64          0         96      47153   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1130,15 +1478,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3332        316        292          0        640      86605   Grand Totals
-      3332        316        292          0        640      86605   ELF Image Totals
-      3332        316        292          0          0          0   ROM Totals
+      7396        620       7308          0       1720     144971   Grand Totals
+      7396        620       7308          0       1720     144971   ELF Image Totals
+      7396        620       7308          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3624 (   3.54kB)
-    Total RW  Size (RW Data + ZI Data)               640 (   0.62kB)
-    Total ROM Size (Code + RO Data + RW Data)       3624 (   3.54kB)
+    Total RO  Size (Code + RO Data)                14704 (  14.36kB)
+    Total RW  Size (RW Data + ZI Data)              1720 (   1.68kB)
+    Total ROM Size (Code + RO Data + RW Data)      14704 (  14.36kB)
 
 ==============================================================================
 

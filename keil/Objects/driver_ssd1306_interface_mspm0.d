@@ -1,7 +1,12 @@
-./objects/main.o: ..\Core\Src\main.c ..\ti_msp_dl_config.h \
-  ..\source\ti\devices\msp\msp.h ..\source\ti\devices\DeviceFamily.h \
-  ..\source\ti\devices\msp\m0p\mspm0g350x.h \
+./objects/driver_ssd1306_interface_mspm0.o: \
+  ..\Core\Src\driver_ssd1306_interface_mspm0.c \
+  ..\Core\Inc\driver_ssd1306_interface.h ..\Core\Inc\driver_ssd1306.h \
   C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdint.h \
+  C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdio.h \
+  C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\string.h \
+  ..\ti_msp_dl_config.h ..\source\ti\devices\msp\msp.h \
+  ..\source\ti\devices\DeviceFamily.h \
+  ..\source\ti\devices\msp\m0p\mspm0g350x.h \
   C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdbool.h \
   ..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
   C:\Users\melon_444\Documents\C_workspace\TItest\DCDC\source\third_party\CMSIS\Core\Include\cmsis_version.h \
@@ -64,8 +69,5 @@
   ..\source\ti\driverlib\dl_uart.h ..\source\ti\driverlib\dl_uart_main.h \
   ..\source\ti\driverlib\dl_vref.h ..\source\ti\driverlib\dl_wwdt.h \
   ..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\source\ti\driverlib\m0p\dl_systick.h ..\Core\Inc\pid_delta.h \
-  ..\Core\Inc\driver_ssd1306.h \
-  C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdio.h \
-  C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\string.h \
-  ..\Core\Inc\driver_ssd1306_interface.h
+  ..\source\ti\driverlib\m0p\dl_systick.h \
+  C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdarg.h
