@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>empty_LP_MSPM0G3507_nortos_keil</TargetName>
+      <TargetName>dcdc</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>empty_LP_MSPM0G3507_nortos_keil</OutputName>
+          <OutputName>dcdc</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -72,7 +72,7 @@
           <BeforeMake>
             <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>cmd.exe /C ""C:\ti\mspm0_sdk_2_02_00_05\tools\keil\syscfg.bat" '$P' empty.syscfg"</UserProg1Name>
+            <UserProg1Name>cmd.exe /C ""C:\ti\mspm0_sdk_2_02_00_05\tools\keil\syscfg.bat" '$P' dcdc.syscfg"</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\source\third_party\CMSIS\Core\Include;..\source;..\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0x</IncludePath>
+              <IncludePath>..;..\source\third_party\CMSIS\Core\Include;..\source;..\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0x;..\Core\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -382,22 +382,32 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source</GroupName>
+          <GroupName>Application</GroupName>
           <Files>
             <File>
-              <FileName>empty.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../empty.c</FilePath>
+              <FilePath>../Core/Src/main.c</FilePath>
             </File>
             <File>
-              <FileName>empty.syscfg</FileName>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid_delta.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/pid_delta.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SysConfig</GroupName>
+          <Files>
+            <File>
+              <FileName>dcdc.syscfg</FileName>
               <FileType>5</FileType>
-              <FilePath>../empty.syscfg</FilePath>
-            </File>
-            <File>
-              <FileName>startup_mspm0g350x_uvision.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>startup_mspm0g350x_uvision.s</FilePath>
+              <FilePath>../dcdc.syscfg</FilePath>
             </File>
             <File>
               <FileName>ti_msp_dl_config.h</FileName>
@@ -408,6 +418,16 @@
               <FileName>ti_msp_dl_config.c</FileName>
               <FileType>1</FileType>
               <FilePath>../ti_msp_dl_config.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Startup</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_mspm0g350x_uvision.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>startup_mspm0g350x_uvision.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -424,7 +444,7 @@
   <LayerInfo>
     <Layers>
       <Layer>
-        <LayName>empty_LP_MSPM0G3507_nortos_keil</LayName>
+        <LayName>dcdc</LayName>
         <LayPrjMark>1</LayPrjMark>
       </Layer>
     </Layers>

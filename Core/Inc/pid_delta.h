@@ -44,6 +44,14 @@ void buck_pid_delta_init(BuckCascadedPID *buck,
                                  float v_kp, float v_ki, float v_kd,
                                  float i_kp, float i_ki, float i_kd);
 
+void buck_single_pid_delta_init(BuckCascadedPID *buck,
+                                 float v_threshold,
+                                 float i_kp, float i_ki, float i_kd);
+
+void boost_single_pid_delta_init(BuckCascadedPID *boost,
+                                 float v_threshold,
+                                 float i_kp, float i_ki, float i_kd);
+
 /* ---------- PID step ---------- */
 float pid_delta_step(PID_Controller *pid, float error);
 
@@ -51,13 +59,19 @@ float pid_delta_step(PID_Controller *pid, float error);
 /* ---------- core control routine (call every Ts) ---------- */
 /* vref is passed as a parameter for dynamic voltage tracking */
 float buck_pid_delta_update(BuckCascadedPID *buck,float v_ref,/* target voltage [V] */float vsense_raw,/* ADC result [V] */float isense_raw);
+
+float buck_single_pid_delta_update(BuckCascadedPID *buck,float i_ref
+                                 , float vsense_raw, float isense_raw);
+                                 
+float boost_single_pid_delta_update(BuckCascadedPID *boost,float i_ref
+                                 , float vsense_raw, float isense_raw);
 /* ADC result [V] */
 
 
 /* ---------- convenience helpers ---------- */
 
-#ifndef PID_INLINE
-#define PID_INLINE
+#ifndef PID_D_INLINE
+#define PID_D_INLINE
 inline void buck_set_vref(BuckCascadedPID *buck, float vref)
 {
     buck->vref = vref;
@@ -68,5 +82,10 @@ inline float buck_get_duty(const BuckCascadedPID *buck)
 {
     return buck->duty;
 }
-#endif /*PID_INLINE*/
+
+inline int single_pid_should_stop(const BuckCascadedPID *pid)
+{
+    return pid->outer.kd > 100.0f;
+}
+#endif /*PID_D_INLINE*/
 #endif /* PID_DELTA_H */

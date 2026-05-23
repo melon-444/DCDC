@@ -1,4 +1,9 @@
+
+
 #include "pid.h"
+
+#ifndef PID_INIT
+#define PID_INIT
 
 void pid_init(PID_Controller *pid,
               float kp, float ki, float kd,
@@ -8,10 +13,11 @@ void pid_init(PID_Controller *pid,
     pid->ki = ki;
     pid->kd = kd;
     pid->integral = 0.0f;
-    pid->prev_error = 0.0f;
+    pid->prev_error[0] = 0.0f;
     pid->integral_limit = ilim;
     pid->output_limit = olim;
 }
+#endif /*PID_INIT*/
 
 void buck_pid_init(BuckCascadedPID *buck,
                    float v_kp, float v_ki, float v_kd,
@@ -95,3 +101,5 @@ float buck_pid_update(BuckCascadedPID *buck,
 
     return buck->duty;
 }
+
+
