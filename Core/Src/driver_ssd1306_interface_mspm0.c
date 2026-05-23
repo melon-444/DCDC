@@ -85,7 +85,8 @@ static void a_iic_send_byte(uint8_t txd)
     uint8_t t;
 
     SCL_L();
-    for (t = 0; t < 8; t++)
+    for (t =
+			0; t < 8; t++)
     {
         if (txd & 0x80)
         {

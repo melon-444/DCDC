@@ -40,7 +40,7 @@ typedef struct {
 #define DEFAULT_VREF        12.0f
 #define DEFAULT_IREF_MAX    5.0f
 #define DEFAULT_DUTY_MIN    0.0f
-#define DEFAULT_DUTY_MAX    0.95f
+#define DEFAULT_DUTY_MAX    0.35f
 
 /* ---------- initialisation ---------- */
 void pid_delta_init(PID_Controller *pid,

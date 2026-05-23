@@ -1,10 +1,9 @@
 
 #include "pid_delta.h"
 
-
 void pid_delta_init(PID_Controller *pid,
-              float kp, float ki, float kd,
-              float ilim, float olim)
+                    float kp, float ki, float kd,
+                    float ilim, float olim)
 {
     pid->kp = kp;
     pid->ki = ki;
@@ -14,7 +13,6 @@ void pid_delta_init(PID_Controller *pid,
     pid->integral_limit = ilim;
     pid->output_limit = olim;
 }
-
 
 void buck_pid_delta_init(CascadedPID *buck,
                          float v_kp, float v_ki, float v_kd,
@@ -29,8 +27,8 @@ void buck_pid_delta_init(CascadedPID *buck,
 }
 
 void buck_single_pid_delta_init(CascadedPID *buck,
-                                 float v_threshold,
-                                 float i_kp, float i_ki, float i_kd)
+                                float v_threshold,
+                                float i_kp, float i_ki, float i_kd)
 {
     pid_delta_init(&buck->inner, i_kp, i_ki, i_kd, 10.0f, DEFAULT_DUTY_MAX);
     buck->outer.kp = v_threshold;
@@ -41,8 +39,8 @@ void buck_single_pid_delta_init(CascadedPID *buck,
 }
 
 void boost_single_pid_delta_init(CascadedPID *boost,
-                                  float v_threshold,
-                                  float i_kp, float i_ki, float i_kd)
+                                 float v_threshold,
+                                 float i_kp, float i_ki, float i_kd)
 {
     pid_delta_init(&boost->inner, i_kp, i_ki, i_kd, 10.0f, DEFAULT_DUTY_MAX);
     boost->outer.kp = v_threshold;
@@ -51,7 +49,6 @@ void boost_single_pid_delta_init(CascadedPID *boost,
     boost->duty = 0.5f;
     boost->state = PID_STATE_IDLE;
 }
-
 
 float pid_delta_step(PID_Controller *pid, float error)
 {
@@ -67,7 +64,7 @@ float pid_delta_step(PID_Controller *pid, float error)
     // p
     p = pid->kp * (error - pid->prev_error[0]);
     // d
-    d = pid->kd * (error -( 2*pid->prev_error[0]) +pid->prev_error[1]);
+    d = pid->kd * (error - (2 * pid->prev_error[0]) + pid->prev_error[1]);
 
     float out = p + pid->integral + d;
 
@@ -113,7 +110,6 @@ float buck_pid_current_update(CascadedPID *buck,
     return buck->duty;
 }
 
-
 float buck_pid_delta_update(CascadedPID *buck,
                             float v_ref,
                             float vsense, /* ADC result [V] */
@@ -158,19 +154,25 @@ float buck_pid_delta_update(CascadedPID *buck,
     return buck->duty;
 }
 
-float buck_single_pid_delta_update(CascadedPID *buck, float i_ref
-                                 , float vsense, float isense)
+float buck_single_pid_delta_update(CascadedPID *buck, float i_ref, float vsense, float isense)
 {
     float i_err;
 
-    if (vsense >= buck->outer.kp) {
-        buck->state     = PID_STATE_STOP;
-        buck->outer.kd  = 999.0f;
-        buck->duty      = 0.0f;
-        return buck->duty;
+    if (vsense >= buck->outer.kp)
+    {
+        if (buck->duty > 0.02f)
+        {
+            buck->duty = buck->duty - 0.02f;
+        }
+        else
+        {
+            buck->state = PID_STATE_STOP;
+            buck->duty = 0.0f;
+            return buck->duty;
+        }
     }
 
-    buck->state    = PID_STATE_CC;
+    buck->state = PID_STATE_CC;
     buck->outer.kd = 0.0f;
 
     i_err = i_ref - isense;
@@ -183,21 +185,21 @@ float buck_single_pid_delta_update(CascadedPID *buck, float i_ref
 
     return buck->duty;
 }
-                                  
-float boost_single_pid_delta_update(CascadedPID *boost,float i_ref
-                                 , float vsense_raw, float isense_raw)
+
+float boost_single_pid_delta_update(CascadedPID *boost, float i_ref, float vsense_raw, float isense_raw)
 {
     float i_in, v_in, i_err;
 
     v_in = vsense_raw / VOLTAGE_GAIN;
     boost->outer.ki = v_in;
 
-    if (v_in >= boost->outer.kp) {
+    if (v_in >= boost->outer.kp)
+    {
         boost->outer.kd = 999.0f;
         boost->duty = 0.0f;
         return boost->duty;
     }
-    //boost->outer.kd = 0.0f;
+    // boost->outer.kd = 0.0f;
 
     i_in = isense_raw / CURRENT_GAIN;
     i_err = i_ref - i_in;

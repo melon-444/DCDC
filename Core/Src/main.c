@@ -26,7 +26,7 @@ typedef enum
     BMS_PWM_TEST
 } bms_state_t;
 
-static const char* state_to_string(bms_state_t st)
+static const char *state_to_string(bms_state_t st)
 {
     switch (st)
     {
@@ -45,7 +45,6 @@ static const char* state_to_string(bms_state_t st)
 
 bms_state_t g_state = BMS_IDLE;
 
-
 static volatile uint32_t adc_irq_count = 0;
 
 /* ==================== Sensor API ==================== */
@@ -57,12 +56,12 @@ inline void triggerADC(void)
 #define VOLTAGE_K 0.16f;
 float getVsense(void)
 {
-    return gVsense_adcV*2.037f/VOLTAGE_K;
+    return gVsense_adcV / VOLTAGE_K;
 }
 #define CURRENT_K 2.2f;
 float getIsense(void)
 {
-    return gIsense_adcV*1.675f/CURRENT_K;
+    return gIsense_adcV / CURRENT_K;
 }
 
 bool isADCReady(void)
@@ -77,7 +76,7 @@ void clearADCReady(void)
 /* ==================== ADC ISR ==================== */
 void ADC_SENSE_INST_IRQHandler(void)
 {
-    
+
     switch (DL_ADC12_getPendingInterrupt(ADC_SENSE_INST))
     {
     case DL_ADC12_IIDX_MEM1_RESULT_LOADED:
@@ -89,8 +88,8 @@ void ADC_SENSE_INST_IRQHandler(void)
         gVsense_adcV = (float)raw0 * ADC_VREF_V / ADC_RESOLUTION;
         gIsense_adcV = (float)raw1 * ADC_VREF_V / ADC_RESOLUTION;
         gADC_ready = true;
-        if(!single_pid_should_stop(&buckpid))
-            g_state=(BMS_CHARGING);
+        if (!single_pid_should_stop(&buckpid))
+            g_state = (BMS_CHARGING);
 
         DL_ADC12_clearInterruptStatus(
             ADC_SENSE_INST,
@@ -98,8 +97,9 @@ void ADC_SENSE_INST_IRQHandler(void)
         break;
     }
     default:
-    {   if(!single_pid_should_stop(&buckpid))
-            g_state=(BMS_FAULT);
+    {
+        if (!single_pid_should_stop(&buckpid))
+            g_state = (BMS_FAULT);
         break;
     }
     }
@@ -124,10 +124,9 @@ void TIMA0_IRQHandler(void)
 static float g_duty_ratio = 0.0f;
 static char buf[24];
 
-
 static void display_update(void)
 {
-    
+
     uint32_t vbat = getVsense() * 1000;
     uint32_t ichg = getIsense() * 1000;
     uint32_t duty_permille = (uint32_t)(g_duty_ratio * 1000UL);
@@ -155,10 +154,9 @@ int main(void)
 
     DL_GPIO_initPeripheralAnalogFunction(IOMUX_PINCM44);
     DL_GPIO_initPeripheralAnalogFunction(IOMUX_PINCM45);
-    
 
     button_init();
-    
+
     NVIC_ClearPendingIRQ(ADC_SENSE_INST_INT_IRQN);
     NVIC_ClearPendingIRQ(PWM_CHG_INST_INT_IRQN);
     NVIC_EnableIRQ(ADC_SENSE_INST_INT_IRQN);
@@ -168,20 +166,20 @@ int main(void)
     DL_ADC12_enablePower(ADC_SENSE_INST);
 
     DL_TimerA_startCounter(PWM_CHG_INST);
-    DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, 320, DL_TIMER_CC_0_INDEX);
-
-
+    DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, 32, DL_TIMER_CC_0_INDEX);
 
     LCD_Init();
 
+    LCD_FillScreen(0x000000);
+    LCD_DrawString(0, 0, "BMS BASIC", COLOR_WHITE, COLOR_BLACK);
+    LCD_DrawString(0, 16, "VBAT:", COLOR_WHITE, COLOR_BLACK);
+    LCD_DrawString(0, 28, "ICHG:", COLOR_WHITE, COLOR_BLACK);
+    LCD_DrawString(0, 40, "DUTY:", COLOR_WHITE, COLOR_BLACK);
+    LCD_DrawString(0, 52, "STAT:", COLOR_WHITE, COLOR_BLACK);
+
     buck_single_pid_delta_init(&buckpid, 4.2f, 0.5f, 0.1f, 0.0001f);
-    while (1){
-        LCD_FillScreen(0x000000);
-        LCD_DrawString(0, 0, "BMS BASIC", COLOR_WHITE, COLOR_BLACK);
-        LCD_DrawString(0, 16, "VBAT:", COLOR_WHITE, COLOR_BLACK);
-        LCD_DrawString(0, 28, "ICHG:", COLOR_WHITE, COLOR_BLACK);
-        LCD_DrawString(0, 40, "DUTY:", COLOR_WHITE, COLOR_BLACK);
-        LCD_DrawString(0, 52, "STAT:", COLOR_WHITE, COLOR_BLACK);
+    while (1)
+    {
         display_update();
         LCD_Update();
 
@@ -192,7 +190,7 @@ int main(void)
 
         if (isADCReady())
         {
-            g_duty_ratio = buck_single_pid_delta_update(&buckpid,0.5, getVsense(), getIsense());
+            g_duty_ratio = buck_single_pid_delta_update(&buckpid, 0.5, getVsense(), getIsense());
 
             DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, PWM_PERIOD * g_duty_ratio, DL_TIMER_CC_0_INDEX);
             clearADCReady();
@@ -203,12 +201,11 @@ int main(void)
              *                                    DL_TIMER_CC_0_INDEX);
              */
         }
-        if(single_pid_should_stop(&buckpid)){
-            g_state=(BMS_DONE);
+        if (single_pid_should_stop(&buckpid))
+        {
+            g_state = (BMS_DONE);
             DL_TimerA_stopCounter(PWM_CHG_INST);
-            break;
+            g_duty_ratio = 0.0f;
         }
-
-
     }
 }
