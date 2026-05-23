@@ -5,6 +5,7 @@
 ".\objects\driver_ssd1306.o"
 ".\objects\driver_ssd1306_interface_mspm0.o"
 ".\objects\st7735_min.o"
+".\objects\button.o"
 ".\objects\ti_msp_dl_config.o"
 ".\objects\startup_mspm0g350x_uvision.o"
 --strict --scatter "./mspm0g3507.sct"

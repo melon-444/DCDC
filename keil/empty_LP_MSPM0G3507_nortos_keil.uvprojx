@@ -414,6 +414,11 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/st7735_min.c</FilePath>
             </File>
+            <File>
+              <FileName>button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/button.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

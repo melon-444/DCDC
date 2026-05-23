@@ -16,7 +16,7 @@ void pid_delta_init(PID_Controller *pid,
 }
 
 
-void buck_pid_delta_init(BuckCascadedPID *buck,
+void buck_pid_delta_init(CascadedPID *buck,
                          float v_kp, float v_ki, float v_kd,
                          float i_kp, float i_ki, float i_kd)
 {
@@ -25,9 +25,10 @@ void buck_pid_delta_init(BuckCascadedPID *buck,
     buck->vref = DEFAULT_VREF;
     buck->duty = 0.5f;
     buck->iref_limit = DEFAULT_IREF_MAX;
+    buck->state = PID_STATE_IDLE;
 }
 
-void buck_single_pid_delta_init(BuckCascadedPID *buck,
+void buck_single_pid_delta_init(CascadedPID *buck,
                                  float v_threshold,
                                  float i_kp, float i_ki, float i_kd)
 {
@@ -35,10 +36,11 @@ void buck_single_pid_delta_init(BuckCascadedPID *buck,
     buck->outer.kp = v_threshold;
     buck->outer.ki = 0.0f;
     buck->outer.kd = 0.0f;
-    buck->duty = 0.5f;
+    buck->duty = 0.1f;
+    buck->state = PID_STATE_IDLE;
 }
 
-void boost_single_pid_delta_init(BuckCascadedPID *boost,
+void boost_single_pid_delta_init(CascadedPID *boost,
                                   float v_threshold,
                                   float i_kp, float i_ki, float i_kd)
 {
@@ -47,6 +49,7 @@ void boost_single_pid_delta_init(BuckCascadedPID *boost,
     boost->outer.ki = 0.0f;
     boost->outer.kd = 0.0f;
     boost->duty = 0.5f;
+    boost->state = PID_STATE_IDLE;
 }
 
 
@@ -64,38 +67,64 @@ float pid_delta_step(PID_Controller *pid, float error)
     // p
     p = pid->kp * (error - pid->prev_error[0]);
     // d
-
     d = pid->kd * (error -( 2*pid->prev_error[0]) +pid->prev_error[1]);
 
     float out = p + pid->integral + d;
 
-    if (pid->output_limit > pid->output_limit)
-        pid->output_limit = pid->output_limit;
-    else if (pid->output_limit < -pid->output_limit)
-        pid->output_limit = -pid->output_limit;
-
     pid->prev_error[1] = pid->prev_error[0];
     pid->prev_error[0] = error;
-    
-    pid->output_cache += out; /* store output for potential debugging */
+
+    pid->output_cache += out;
+
+    if (pid->output_cache > pid->output_limit)
+        pid->output_cache = pid->output_limit;
+    else if (pid->output_cache < -pid->output_limit)
+        pid->output_cache = -pid->output_limit;
+
     return pid->output_cache;
 }
 
 #define BUCK_OUTER_UPDATE_RATE 10 /* update outer loop every 10 calls */
 static int buckOuterCounter = BUCK_OUTER_UPDATE_RATE;
 
+float buck_pid_current_update(CascadedPID *buck,
+                              float i_ref,
+                              float isense)
+{
+    float i_in;
+    float i_err;
 
-float buck_pid_delta_update(BuckCascadedPID *buck,
+    /* ADC scaling */
+    i_in = isense;
+
+    /* current loop error */
+    i_err = i_ref - i_in;
+
+    /* PID output */
+    buck->duty = pid_delta_step(&buck->inner, i_err);
+
+    /* clamp duty */
+    if (buck->duty > DEFAULT_DUTY_MAX)
+        buck->duty = DEFAULT_DUTY_MAX;
+
+    if (buck->duty < DEFAULT_DUTY_MIN)
+        buck->duty = DEFAULT_DUTY_MIN;
+
+    return buck->duty;
+}
+
+
+float buck_pid_delta_update(CascadedPID *buck,
                             float v_ref,
-                            float vsense_raw, /* ADC result [V] */
-                            float isense_raw)
+                            float vsense, /* ADC result [V] */
+                            float isense)
 {
     float v_in, i_in;
     float v_err, iref, i_err;
 
     /* scale ADC readings back to physical units */
-    v_in = vsense_raw / VOLTAGE_GAIN;
-    i_in = isense_raw / CURRENT_GAIN;
+    v_in = vsense;
+    i_in = isense;
 
     /* ---- outer voltage loop ---- */
     v_err = v_ref - v_in;
@@ -129,12 +158,12 @@ float buck_pid_delta_update(BuckCascadedPID *buck,
     return buck->duty;
 }
 
-float buck_single_pid_delta_update(BuckCascadedPID *buck,float i_ref
-                                 , float vsense_raw, float isense_raw)
+float buck_single_pid_delta_update(CascadedPID *buck,float i_ref
+                                 , float vsense, float isense)
 {
     float i_in, v_in, i_err;
 
-    v_in = vsense_raw / VOLTAGE_GAIN;
+    v_in = vsense;
     buck->outer.ki = v_in;
 
     if (v_in >= buck->outer.kp) {
@@ -144,7 +173,7 @@ float buck_single_pid_delta_update(BuckCascadedPID *buck,float i_ref
     }
     //buck->outer.kd = 0.0f;
 
-    i_in = isense_raw / CURRENT_GAIN;
+    i_in = isense;
     i_err = i_ref - i_in;
     buck->duty = pid_delta_step(&buck->inner, i_err);
 
@@ -156,7 +185,7 @@ float buck_single_pid_delta_update(BuckCascadedPID *buck,float i_ref
     return buck->duty;
 }
                                   
-float boost_single_pid_delta_update(BuckCascadedPID *boost,float i_ref
+float boost_single_pid_delta_update(CascadedPID *boost,float i_ref
                                  , float vsense_raw, float isense_raw)
 {
     float i_in, v_in, i_err;

@@ -43,6 +43,13 @@ void buck_pid_init(BuckCascadedPID *buck,
                                  float v_kp, float v_ki, float v_kd,
                                  float i_kp, float i_ki, float i_kd);
 
+void buck_single_pid_init(BuckCascadedPID *buck,
+                                 float v_kp, float v_ki, float v_kd,
+                                 float i_kp, float i_ki, float i_kd);
+
+void boost_single_pid_init(BuckCascadedPID *boost,
+                                 float v_kp, float v_ki, float v_kd,
+                                 float i_kp, float i_ki, float i_kd);
 /* ---------- PID step ---------- */
 float pid_step(PID_Controller *pid, float error);
 

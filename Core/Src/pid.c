@@ -4,7 +4,6 @@
 
 #ifndef PID_INIT
 #define PID_INIT
-
 void pid_init(PID_Controller *pid,
               float kp, float ki, float kd,
               float ilim, float olim)
@@ -18,7 +17,6 @@ void pid_init(PID_Controller *pid,
     pid->output_limit = olim;
 }
 #endif /*PID_INIT*/
-
 void buck_pid_init(BuckCascadedPID *buck,
                    float v_kp, float v_ki, float v_kd,
                    float i_kp, float i_ki, float i_kd)
