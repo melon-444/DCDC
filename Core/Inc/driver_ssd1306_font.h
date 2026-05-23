@@ -39,8 +39,6 @@
 #define DRIVER_SSD1306_FONT_H
 
 #include <stdint.h>
-#include <stdio.h>
-#include <string.h>
 
 #ifdef __cplusplus
 extern "C"{

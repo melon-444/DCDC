@@ -409,6 +409,11 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/driver_ssd1306_interface_mspm0.c</FilePath>
             </File>
+            <File>
+              <FileName>st7735_min.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/st7735_min.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

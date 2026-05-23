@@ -1,6 +1,7 @@
 #include "ti_msp_dl_config.h"
 #include "pid_delta.h"
-#include "driver_ssd1306.h"
+#include "st7735_min.h"
+#include "driver_ssd1306_font.h"
 #include "driver_ssd1306_interface.h"
 
 BuckCascadedPID buckpid;
@@ -70,9 +71,30 @@ void TIMA0_IRQHandler(void)
 /* ==================== main ==================== */
 ssd1306_handle_t g_oled;
 
+static void display_update(void)
+{
+    char buf[24];
+    uint32_t vbat = gVsense_adcV * 1000;
+    uint32_t ichg = gIsense_adcV * 1000;
+    uint32_t duty_permille = ((uint32_t)g_duty_counts * 1000UL) / PWM_PERIOD;
+
+    snprintf(buf, sizeof(buf), "%lu.%03luV   ", vbat / 1000UL, vbat % 1000UL);
+    LCD_DrawString(42, 16, buf, COLOR_WHITE, COLOR_BLACK);
+
+    snprintf(buf, sizeof(buf), "%lumA    ", ichg);
+    LCD_DrawString(42, 28, buf, COLOR_WHITE, COLOR_BLACK);
+
+    snprintf(buf, sizeof(buf), "%lu.%lu%%    ", duty_permille / 10UL, duty_permille % 10UL);
+    LCD_DrawString(42, 40, buf, COLOR_WHITE, COLOR_BLACK);
+
+    snprintf(buf, sizeof(buf), "%s       ", state_to_string(g_state));
+    LCD_DrawString(42, 52, buf, COLOR_WHITE, COLOR_BLACK);
+}
+
 int main(void)
 {
     SYSCFG_DL_init();
+    // OLED_DRIVER_INIT();
 
     DL_TimerA_startCounter(PWM_CHG_INST);
     DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, 320, DL_TIMER_CC_0_INDEX);
@@ -84,40 +106,18 @@ int main(void)
     gIsense_adcV = (float)raw1 * ADC_VREF_V / ADC_RESOLUTION;
     gADC_ready = true;
 
-    ssd1306_interface_spi_init();
-    // 1. 初始化 handle 并链接接口函数
-    DRIVER_SSD1306_LINK_INIT(&g_oled, ssd1306_handle_t);
-    DRIVER_SSD1306_LINK_IIC_INIT(&g_oled, ssd1306_interface_iic_init);
-    DRIVER_SSD1306_LINK_IIC_DEINIT(&g_oled, ssd1306_interface_iic_deinit);
-    DRIVER_SSD1306_LINK_IIC_WRITE(&g_oled, ssd1306_interface_iic_write);
-    DRIVER_SSD1306_LINK_RESET_GPIO_INIT(&g_oled, ssd1306_interface_reset_gpio_init);
-    DRIVER_SSD1306_LINK_RESET_GPIO_DEINIT(&g_oled, ssd1306_interface_reset_gpio_deinit);
-    DRIVER_SSD1306_LINK_RESET_GPIO_WRITE(&g_oled, ssd1306_interface_reset_gpio_write);
-    DRIVER_SSD1306_LINK_DELAY_MS(&g_oled, ssd1306_interface_delay_ms);
-    DRIVER_SSD1306_LINK_DEBUG_PRINT(&g_oled, ssd1306_interface_debug_print);
-
-    // 2. 初始化芯片
-    ssd1306_set_interface(&g_oled, SSD1306_INTERFACE_IIC);
-    ssd1306_set_addr_pin(&g_oled, SSD1306_ADDR_SA0_0); // 0x78
-    ssd1306_init(&g_oled);
-    ssd1306_clear(&g_oled);
-    
-    // 4. 画实心矩形（色块），参数：left, top, right, bottom, color
-    ssd1306_gram_fill_rect(&g_oled, 0, 20, 30, 40, 1);
-
-    // 3. 写文本（在 GRAM 中绘制，需要 update 才刷到屏幕）
-    ssd1306_gram_write_string(&g_oled, 0, 0, "Hello", 5, 1, SSD1306_FONT_12);
-    ssd1306_gram_update(&g_oled); // 刷新到屏幕
-
+    void LCD_Init(void);
+    // LCD_DrawString( 0, 0, "hello world", 12, 0);
 
     while (1)
     {
-        ssd1306_gram_update(&g_oled);
+        display_update();
+        LCD_Update();
+
         triggerADC();
 
         if (isADCReady())
         {
-
             DL_TimerA_setCaptureCompareValue(PWM_CHG_INST, PWM_PERIOD * buck_single_pid_delta_update(&buckpid, 0.5, getVsense(), getIsense()), DL_TIMER_CC_0_INDEX);
             clearADCReady();
             /* PID control entry point:

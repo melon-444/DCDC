@@ -2,45 +2,59 @@
 #include "ti_msp_dl_config.h"
 #include <stdarg.h>
 
-#define IIC_PORT             GPIO_GRP_0_PORT
-#define IIC_SCL_MASK         GPIO_GRP_0_LCD_SCL_PIN
-#define IIC_SDA_MASK         GPIO_GRP_0_LCD_SDA_PIN
-#define IIC_RESET_MASK       GPIO_GRP_0_LCD_RES_PIN
+#define IIC_PORT GPIO_GRP_0_PORT
+#define IIC_SCL_MASK GPIO_GRP_0_LCD_SCL_PIN
+#define IIC_SDA_MASK GPIO_GRP_0_LCD_SDA_PIN
+#define IIC_RESET_MASK GPIO_GRP_0_LCD_RES_PIN
 
-#define SDA_IN()             (IIC_PORT->DOE31_0 &= ~IIC_SDA_MASK)
-#define SDA_OUT()            (IIC_PORT->DOE31_0 |= IIC_SDA_MASK)
-#define IIC_SCL_H()          DL_GPIO_writePinsVal(IIC_PORT, IIC_SCL_MASK, IIC_SCL_MASK)
-#define IIC_SCL_L()          DL_GPIO_writePinsVal(IIC_PORT, IIC_SCL_MASK, 0)
-#define IIC_SDA_H()          DL_GPIO_writePinsVal(IIC_PORT, IIC_SDA_MASK, IIC_SDA_MASK)
-#define IIC_SDA_L()          DL_GPIO_writePinsVal(IIC_PORT, IIC_SDA_MASK, 0)
-#define READ_SDA()           (DL_GPIO_readPins(IIC_PORT, IIC_SDA_MASK) != 0)
+/*
+ * Open-drain emulation: drive LOW via output+0, release HIGH via input (float, pull-up).
+ * DOUT cleared before DOE set to avoid glitch when enabling driver.
+ */
+#define SCL_L() DL_GPIO_clearPins(IIC_PORT, IIC_SCL_MASK)
+#define SCL_H() DL_GPIO_setPins(IIC_PORT, IIC_SCL_MASK)
+
+#define SDA_L()                                       \
+    do                                                \
+    {                                                 \
+        DL_GPIO_clearPins(IIC_PORT, IIC_SDA_MASK);    \
+        DL_GPIO_enableOutput(IIC_PORT, IIC_SDA_MASK); \
+    } while (0)
+#define SDA_H()                                        \
+    do                                                 \
+    {                                                  \
+        DL_GPIO_setPins(IIC_PORT, IIC_SDA_MASK);       \
+        DL_GPIO_disableOutput(IIC_PORT, IIC_SDA_MASK); \
+    } while (0)
+#define READ_SDA() ((DL_GPIO_readPins(IIC_PORT, IIC_SDA_MASK) & IIC_SDA_MASK) ? 1U : 0U)
 
 static void iic_delay_us(uint32_t us)
 {
-    uint32_t cycles = us * (CPUCLK_FREQ / 1000000) / 4;
-    for (volatile uint32_t i = 0; i < cycles; i++) {}
+    uint32_t cycles = us * (CPUCLK_FREQ / 1000000);
+    while (us--)
+    {
+        DL_Common_delayCycles(cycles);
+    }
 }
 
 static void a_iic_start(void)
 {
-    SDA_OUT();
-    IIC_SDA_H();
-    IIC_SCL_H();
+    SDA_H();
+    SCL_H();
     iic_delay_us(4);
-    IIC_SDA_L();
+    SDA_L();
     iic_delay_us(4);
-    IIC_SCL_L();
+    SCL_L();
 }
 
 static void a_iic_stop(void)
 {
-    SDA_OUT();
-    IIC_SCL_L();
-    IIC_SDA_L();
+    SCL_L();
+    SDA_L();
     iic_delay_us(4);
-    IIC_SCL_H();
+    SCL_H();
     iic_delay_us(4);
-    IIC_SDA_H();
+    SDA_H();
     iic_delay_us(4);
 }
 
@@ -48,10 +62,9 @@ static uint8_t a_iic_wait_ack(void)
 {
     uint16_t uc_err_time = 0;
 
-    SDA_IN();
-    IIC_SDA_H();
+    SDA_H();
     iic_delay_us(1);
-    IIC_SCL_H();
+    SCL_H();
     iic_delay_us(1);
     while (READ_SDA() != 0)
     {
@@ -62,7 +75,7 @@ static uint8_t a_iic_wait_ack(void)
             return 1;
         }
     }
-    IIC_SCL_L();
+    SCL_L();
 
     return 0;
 }
@@ -71,38 +84,35 @@ static void a_iic_send_byte(uint8_t txd)
 {
     uint8_t t;
 
-    SDA_OUT();
-    IIC_SCL_L();
+    SCL_L();
     for (t = 0; t < 8; t++)
     {
         if (txd & 0x80)
         {
-            IIC_SDA_H();
+            SDA_H();
         }
         else
         {
-            IIC_SDA_L();
+            SDA_L();
         }
         txd <<= 1;
         iic_delay_us(2);
-        IIC_SCL_H();
+        SCL_H();
         iic_delay_us(2);
-        IIC_SCL_L();
+        SCL_L();
         iic_delay_us(2);
     }
 }
 
 uint8_t ssd1306_interface_iic_init(void)
 {
-    SDA_OUT();
-    IIC_SDA_H();
-    IIC_SCL_H();
+    SDA_H();
+    SCL_H();
     return 0;
 }
 
 uint8_t ssd1306_interface_iic_deinit(void)
 {
-
     return 0;
 }
 
@@ -154,8 +164,11 @@ uint8_t ssd1306_interface_spi_write_cmd(uint8_t *buf, uint16_t len)
 
 void ssd1306_interface_delay_ms(uint32_t ms)
 {
-    uint32_t cycles = ms * (CPUCLK_FREQ / 1000) / 4;
-    for (volatile uint32_t i = 0; i < cycles; i++) {}
+    uint32_t cycles = ms * (CPUCLK_FREQ / 1000);
+    while (ms--)
+    {
+        DL_Common_delayCycles(cycles);
+    }
 }
 
 void ssd1306_interface_debug_print(const char *const fmt, ...)

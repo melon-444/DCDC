@@ -1,4 +1,4 @@
-./objects/main.o: ..\Core\Src\main.c ..\ti_msp_dl_config.h \
+./objects/st7735_min.o: ..\Core\Src\st7735_min.c ..\ti_msp_dl_config.h \
   ..\source\ti\devices\msp\msp.h ..\source\ti\devices\DeviceFamily.h \
   ..\source\ti\devices\msp\m0p\mspm0g350x.h \
   C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdint.h \
@@ -64,8 +64,5 @@
   ..\source\ti\driverlib\dl_uart.h ..\source\ti\driverlib\dl_uart_main.h \
   ..\source\ti\driverlib\dl_vref.h ..\source\ti\driverlib\dl_wwdt.h \
   ..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\source\ti\driverlib\m0p\dl_systick.h ..\Core\Inc\pid_delta.h \
-  ..\Core\Inc\st7735_min.h ..\Core\Inc\driver_ssd1306_font.h \
-  ..\Core\Inc\driver_ssd1306_interface.h ..\Core\Inc\driver_ssd1306.h \
-  C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\stdio.h \
+  ..\source\ti\driverlib\m0p\dl_systick.h ..\Core\Inc\st7735_min.h \
   C:\Program\ Files\Keil_v5\ARM\ARMCLANG\include\string.h
