@@ -158,23 +158,22 @@ float buck_pid_delta_update(CascadedPID *buck,
     return buck->duty;
 }
 
-float buck_single_pid_delta_update(CascadedPID *buck,float i_ref
+float buck_single_pid_delta_update(CascadedPID *buck, float i_ref
                                  , float vsense, float isense)
 {
-    float i_in, v_in, i_err;
+    float i_err;
 
-    v_in = vsense;
-    buck->outer.ki = v_in;
-
-    if (v_in >= buck->outer.kp) {
-        buck->outer.kd = 999.0f;
-        buck->duty = 0.0f;
+    if (vsense >= buck->outer.kp) {
+        buck->state     = PID_STATE_STOP;
+        buck->outer.kd  = 999.0f;
+        buck->duty      = 0.0f;
         return buck->duty;
     }
-    //buck->outer.kd = 0.0f;
 
-    i_in = isense;
-    i_err = i_ref - i_in;
+    buck->state    = PID_STATE_CC;
+    buck->outer.kd = 0.0f;
+
+    i_err = i_ref - isense;
     buck->duty = pid_delta_step(&buck->inner, i_err);
 
     if (buck->duty > DEFAULT_DUTY_MAX)

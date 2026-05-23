@@ -96,7 +96,7 @@ inline float buck_get_duty(const CascadedPID *buck)
 
 inline int single_pid_should_stop(const CascadedPID *pid)
 {
-    return pid->outer.kd > 100.0f;
+    return pid ->state == PID_STATE_STOP;
 }
 #endif /*PID_D_INLINE*/
 #endif /* PID_DELTA_H */

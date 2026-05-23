@@ -46,7 +46,7 @@ static const char* state_to_string(bms_state_t st)
 bms_state_t g_state = BMS_IDLE;
 
 
-volatile uint32_t adc_irq_count = 0;
+static volatile uint32_t adc_irq_count = 0;
 
 /* ==================== Sensor API ==================== */
 inline void triggerADC(void)
@@ -82,7 +82,7 @@ void ADC_SENSE_INST_IRQHandler(void)
     {
     case DL_ADC12_IIDX_MEM1_RESULT_LOADED:
     {
-        adc_irq_count++;
+        adc_irq_count += 1;
         uint16_t raw0 = DL_ADC12_getMemResult(ADC_SENSE_INST, ADC_SENSE_ADCMEM_VBAT);
         uint16_t raw1 = DL_ADC12_getMemResult(ADC_SENSE_INST, ADC_SENSE_ADCMEM_ICHG);
 
@@ -122,7 +122,6 @@ void TIMA0_IRQHandler(void)
 /* ==================== main ==================== */
 
 static float g_duty_ratio = 0.0f;
-
 static char buf[24];
 
 
@@ -132,6 +131,7 @@ static void display_update(void)
     uint32_t vbat = getVsense() * 1000;
     uint32_t ichg = getIsense() * 1000;
     uint32_t duty_permille = (uint32_t)(g_duty_ratio * 1000UL);
+    uint32_t counting = adc_irq_count;
 
     snprintf(buf, sizeof(buf), "%lu.%03luV   ", (vbat / 1000UL), (vbat % 1000UL));
     LCD_DrawString(42, 16, buf, COLOR_WHITE, COLOR_BLACK);
@@ -145,7 +145,7 @@ static void display_update(void)
     snprintf(buf, sizeof(buf), "%s", state_to_string(g_state));
     LCD_DrawString(42, 52, buf, COLOR_WHITE, COLOR_BLACK);
 
-    snprintf(buf, sizeof(buf), "%u", adc_irq_count);
+    snprintf(buf, sizeof(buf), "%u", counting);
     LCD_DrawString(82, 52, buf, COLOR_WHITE, COLOR_BLACK);
 }
 
